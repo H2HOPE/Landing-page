@@ -1,4 +1,6 @@
 ---
+const apiUrl = import.meta.env.PUBLIC_API_URL;
+const apiKey = import.meta.env.PUBLIC_API_KEY;
 ---
 
 <div id="contactModal" class="modal-overlay" aria-hidden="true">
@@ -29,10 +31,6 @@
         <label for="fieldEmail">Email</label>
         <input type="email" id="fieldEmail" name="email" required placeholder="vas@email.cz" />
       </div>
-      <div class="form-group">
-        <label for="fieldZprava"><span class="cs-only">Zpráva</span><span class="en-only">Message</span></label>
-        <textarea id="fieldZprava" name="zprava" required rows="4" placeholder="Zajímá mě více informací o..."></textarea>
-      </div>
       <div id="modalError" class="modal-alert-error" hidden>
         <span class="cs-only">Nepodařilo se odeslat formulář. Zkuste to prosím znovu.</span>
         <span class="en-only">Failed to send the form. Please try again.</span>
@@ -59,14 +57,14 @@
   </div>
 </div>
 
-<script>
+<script define:vars={{ apiUrl, apiKey }}>
   function openContactModal() {
     const modal = document.getElementById('contactModal');
     if (!modal) return;
-    const form = document.getElementById('contactForm') as HTMLFormElement | null;
+    const form = document.getElementById('contactForm');
     const success = document.getElementById('modalSuccess');
     const error = document.getElementById('modalError');
-    const submitBtn = document.getElementById('modalSubmit') as HTMLButtonElement | null;
+    const submitBtn = document.getElementById('modalSubmit');
     const submitLabel = document.getElementById('submitLabel');
     const submitLoading = document.getElementById('submitLoading');
     if (form) { form.reset(); form.hidden = false; }
@@ -88,18 +86,15 @@
     document.body.style.overflow = '';
   }
 
-  (window as any).openContactModal = openContactModal;
+  window.openContactModal = openContactModal;
 
   document.getElementById('modalClose')?.addEventListener('click', closeContactModal);
-
   document.getElementById('contactModal')?.addEventListener('click', (e) => {
     if (e.target === e.currentTarget) closeContactModal();
   });
-
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeContactModal();
   });
-
   document.querySelectorAll('[data-open-modal="contact"]').forEach((el) => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
@@ -107,11 +102,11 @@
     });
   });
 
-  const contactForm = document.getElementById('contactForm') as HTMLFormElement | null;
+  const contactForm = document.getElementById('contactForm');
   contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const form = e.currentTarget as HTMLFormElement;
-    const submitBtn = document.getElementById('modalSubmit') as HTMLButtonElement | null;
+    const form = e.currentTarget;
+    const submitBtn = document.getElementById('modalSubmit');
     const submitLabel = document.getElementById('submitLabel');
     const submitLoading = document.getElementById('submitLoading');
     const errorEl = document.getElementById('modalError');
@@ -123,18 +118,17 @@
     if (errorEl) errorEl.hidden = true;
 
     const data = {
-      jmeno: (form.elements.namedItem('jmeno') as HTMLInputElement).value.trim(),
-      telefon: (form.elements.namedItem('telefon') as HTMLInputElement).value.trim(),
-      email: (form.elements.namedItem('email') as HTMLInputElement).value.trim(),
-      zprava: (form.elements.namedItem('zprava') as HTMLTextAreaElement).value.trim(),
+      Jmeno: form.elements.namedItem('jmeno').value.trim(),
+      Telefon: form.elements.namedItem('telefon').value.trim(),
+      Email: form.elements.namedItem('email').value.trim(),
     };
 
     try {
-      const res = await fetch(import.meta.env.PUBLIC_API_URL, {
+      const res = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Api-Key': import.meta.env.PUBLIC_API_KEY,
+          'jv-api-key': apiKey,
         },
         body: JSON.stringify(data),
       });
