@@ -1,0 +1,497 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  hasHero?: boolean;
+}
+
+const {
+  title = "H2OPE – Vodíková terapie",
+  description = "Lepší spánek, rychlejší regenerace, více energie. Vodíková terapie na míru pro firmy i jednotlivce.",
+  hasHero = false,
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+const isActive = (path: string) => pathname === path || (path !== '/' && pathname.startsWith(path));
+---
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <link rel="icon" href="/favicon.ico" />
+  <script>
+    (function() {
+      var lang = localStorage.getItem('h2hope-lang') || 'cs';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.lang = lang;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class={`nav${hasHero ? ' nav-transparent' : ''}`} id="mainNav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/images/h2ope-logo-DZk0y5En.png" alt="H2OPE" height="38" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="/" class={`nav-link ${isActive('/') && pathname === '/' ? 'active' : ''}`}><span class="cs-only">Úvod</span><span class="en-only">Home</span></a>
+        <a href="/jak-to-funguje" class={`nav-link ${isActive('/jak-to-funguje') ? 'active' : ''}`}><span class="cs-only">Jak to funguje</span><span class="en-only">How It Works</span></a>
+        <a href="/pro-firmy" class={`nav-link ${isActive('/pro-firmy') ? 'active' : ''}`}><span class="cs-only">Pro firmy</span><span class="en-only">For Companies</span></a>
+        <a href="/pro-jednotlivce" class={`nav-link ${isActive('/pro-jednotlivce') ? 'active' : ''}`}><span class="cs-only">Pro jednotlivce</span><span class="en-only">For Individuals</span></a>
+        <a href="/dukazy" class={`nav-link ${isActive('/dukazy') ? 'active' : ''}`}><span class="cs-only">Důkazy & FAQ</span><span class="en-only">Evidence & FAQ</span></a>
+        <button id="langToggle" class="nav-link nav-lang" type="button" aria-label="Switch language">
+          <span class="cs-only">EN</span><span class="en-only">CS</span>
+        </button>
+        <a href="#kontakt" class="btn btn-orange nav-cta"><span class="cs-only">Kontakt</span><span class="en-only">Contact</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="footer" id="kontakt">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="/images/h2ope-logo-DZk0y5En.png" alt="H2OPE" height="40" class="footer-logo" />
+          <p class="footer-disclaimer">
+            <span class="cs-only">H2OPE neposkytuje lékařské služby. Vodíková terapie je podpůrný wellness program a nenahrazuje odbornou lékařskou péči.</span>
+            <span class="en-only">H2OPE does not provide medical services. Hydrogen therapy is a supportive wellness program and does not replace professional medical care.</span>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4><span class="cs-only">Rychlé odkazy</span><span class="en-only">Quick Links</span></h4>
+          <ul>
+            <li><a href="/jak-to-funguje"><span class="cs-only">Jak to funguje</span><span class="en-only">How It Works</span></a></li>
+            <li><a href="/pro-firmy"><span class="cs-only">Pro firmy</span><span class="en-only">For Companies</span></a></li>
+            <li><a href="/pro-jednotlivce"><span class="cs-only">Pro jednotlivce</span><span class="en-only">For Individuals</span></a></li>
+            <li><a href="#kontakt"><span class="cs-only">Kontakt</span><span class="en-only">Contact</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4><span class="cs-only">Více informací</span><span class="en-only">More Info</span></h4>
+          <ul>
+            <li><a href="/pro-jednotlivce#flowgen"><span class="cs-only">FlowGen aplikace</span><span class="en-only">FlowGen App</span></a></li>
+            <li><a href="/dukazy"><span class="cs-only">Důkazy & FAQ</span><span class="en-only">Evidence & FAQ</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#"><span class="cs-only">Zásady ochrany osobních údajů</span><span class="en-only">Privacy Policy</span></a></li>
+            <li><a href="#"><span class="cs-only">Nastavení cookies</span><span class="en-only">Cookie Settings</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p><span class="cs-only">© 2026 H2OPE s.r.o. Všechna práva vyhrazena.</span><span class="en-only">© 2026 H2OPE s.r.o. All rights reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    const nav = document.getElementById('mainNav');
+
+    toggle?.addEventListener('click', () => {
+      links?.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
+      link.addEventListener('click', () => {
+        links?.classList.remove('open');
+        toggle?.classList.remove('open');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav?.classList.add('scrolled');
+      } else {
+        nav?.classList.remove('scrolled');
+      }
+    });
+
+    document.getElementById('langToggle')?.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-lang') || 'cs';
+      const next = current === 'cs' ? 'en' : 'cs';
+      document.documentElement.setAttribute('data-lang', next);
+      document.documentElement.lang = next;
+      localStorage.setItem('h2hope-lang', next);
+    });
+  </script>
+
+</body>
+</html>
+
+<style is:global>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue: #1a3a5c;
+    --cyan: #00b4d8;
+    --orange: #f97316;
+    --orange-dark: #ea6c0a;
+    --gray-light: #f0f4f8;
+    --gray: #6b7280;
+    --white: #ffffff;
+    --text: #1e293b;
+    --font: 'Inter', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* LANGUAGE SWITCHER */
+  [data-lang="en"] .cs-only { display: none !important; }
+  [data-lang="cs"] .en-only { display: none !important; }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    line-height: 1;
+  }
+  .btn-orange {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+  }
+  .btn-orange:hover { background: var(--orange-dark); border-color: var(--orange-dark); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.15); }
+  .btn-outline-orange {
+    background: transparent;
+    color: var(--orange);
+    border-color: var(--orange);
+  }
+  .btn-outline-orange:hover { background: var(--orange); color: var(--white); }
+
+  /* NAVIGATION */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    background: var(--white);
+    box-shadow: 0 1px 12px rgba(26,58,92,0.08);
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .nav.scrolled {
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  }
+  .nav.nav-transparent {
+    background: transparent;
+    box-shadow: none;
+  }
+  .nav.nav-transparent.scrolled {
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  }
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+  .nav-logo img { height: 38px; width: auto; }
+  .nav.nav-transparent:not(.scrolled) .nav-logo img { filter: brightness(0) invert(1); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: auto;
+  }
+  .nav-link {
+    color: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .nav-link:hover { background: rgba(26,58,92,0.07); }
+  .nav-link.active { background: rgba(26,58,92,0.1); }
+  .nav-lang {
+    background: none;
+    border: 1px solid rgba(26,58,92,0.25);
+    color: var(--blue);
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+  }
+  .nav-lang:hover { background: rgba(26,58,92,0.07); }
+  .nav-cta { margin-left: 0.5rem; padding: 0.5rem 1.25rem; font-size: 0.9rem; }
+
+  /* transparent nav overrides (hero pages only) */
+  .nav.nav-transparent:not(.scrolled) .nav-link { color: var(--white); }
+  .nav.nav-transparent:not(.scrolled) .nav-link:hover { background: rgba(255,255,255,0.12); }
+  .nav.nav-transparent:not(.scrolled) .nav-link.active { background: rgba(255,255,255,0.18); }
+  .nav.nav-transparent:not(.scrolled) .nav-lang { border-color: rgba(255,255,255,0.4); color: var(--white); }
+  .nav.nav-transparent:not(.scrolled) .nav-lang:hover { background: rgba(255,255,255,0.12); }
+  .nav.nav-transparent:not(.scrolled) .nav-toggle span { background: var(--white); }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0.25rem;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* SECTIONS */
+  section { padding: 5rem 0; }
+  .section-dark { background: var(--blue); color: var(--white); }
+  .section-gray { background: var(--gray-light); }
+
+  .section-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .section-sub {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+  .text-center { text-align: center; }
+  .text-center .section-sub { margin-left: auto; margin-right: auto; }
+
+  /* CARDS */
+  .card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px rgba(26,58,92,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(26,58,92,0.14); }
+
+  /* BANNER */
+  .page-banner {
+    background: linear-gradient(135deg, var(--blue) 0%, #0d6e8f 100%);
+    color: var(--white);
+    padding: 8rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/images/page-header-banner-YJdgZXWe.png') center/cover no-repeat;
+    opacity: 0.08;
+  }
+  .page-banner .container { position: relative; z-index: 1; }
+  .page-banner h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+  .page-banner p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    max-width: 560px;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: linear-gradient(135deg, var(--blue) 0%, #0d6e8f 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 0;
+  }
+  .cta-section h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
+  .cta-section p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 2rem; }
+  .cta-note { font-size: 0.85rem; opacity: 0.65; margin-top: 1rem; }
+
+  /* STATS */
+  .stats-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--cyan);
+    display: block;
+  }
+  .stat-label { font-size: 0.85rem; opacity: 0.75; }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0;
+  }
+  .testimonial {
+    background: var(--white);
+    border: 1px solid rgba(26,58,92,0.09);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.07);
+  }
+  .testimonial blockquote {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+  .testimonial cite {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray);
+    font-style: normal;
+  }
+  .testimonial-stars { color: var(--orange); margin-bottom: 0.75rem; font-size: 1rem; }
+  .testimonials-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--gray);
+    opacity: 0.65;
+    margin-top: 1.5rem;
+  }
+
+  /* FOOTER */
+  .footer { background: var(--blue); color: var(--white); }
+  .footer-top { padding: 4rem 0 3rem; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .footer-logo { filter: brightness(0) invert(1); margin-bottom: 1rem; }
+  .footer-disclaimer { font-size: 0.85rem; opacity: 0.6; line-height: 1.6; max-width: 280px; }
+  .footer-col h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1.25rem;
+  }
+  .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
+  .footer-col a { font-size: 0.9rem; opacity: 0.7; transition: opacity 0.2s; }
+  .footer-col a:hover { opacity: 1; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 1.25rem 0;
+    font-size: 0.85rem;
+    opacity: 0.5;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .nav-toggle { display: flex; }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--blue);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      z-index: -1;
+    }
+    .nav-links.open { display: flex; z-index: 999; }
+    .nav-link { font-size: 1.1rem; padding: 0.75rem 2rem; }
+    .nav-cta { margin-left: 0; padding: 0.75rem 2.5rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 3.5rem 0; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .stats-row { justify-content: center; }
+    .page-banner { padding: 7rem 0 3rem; }
+  }
+</style>

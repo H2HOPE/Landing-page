@@ -1,17 +1,600 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="H2OPE – Lepší spánek, rychlejší regenerace, více energie" hasHero={true}>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/images/hero-wave-bg-D3SlsVy3.png" alt="" class="hero-wave" />
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">AI-Powered Wellness</div>
+      <h1 class="hero-title">
+        <span class="cs-only">Lepší spánek<br />Rychlejší regenerace<br />Více energie</span>
+        <span class="en-only">Better Sleep<br />Faster Recovery<br />More Energy</span>
+      </h1>
+      <p class="hero-sub"><span class="cs-only">Napsáno životem, podpořeno srdcem.</span><span class="en-only">Written by life, backed by heart.</span></p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">500+</span>
+          <span class="hero-stat-label"><span class="cs-only">klientů</span><span class="en-only">clients</span></span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">6 000</span>
+          <span class="hero-stat-label"><span class="cs-only">odinhalovaných hodin</span><span class="en-only">inhaled hours</span></span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">3 <span class="cs-only">roky</span><span class="en-only">yrs</span></span>
+          <span class="hero-stat-label"><span class="cs-only">praxe</span><span class="en-only">of practice</span></span>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="/pro-firmy" class="btn btn-orange"><span class="cs-only">Pro firmy →</span><span class="en-only">For Companies →</span></a>
+        <a href="/pro-jednotlivce" class="btn btn-outline"><span class="cs-only">Pro jednotlivce</span><span class="en-only">For Individuals</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CO JE MOLEKULÁRNÍ VODÍK -->
+  <section class="molecule-section">
+    <div class="container">
+      <p class="mol-label"><span class="cs-only">O vodíkové terapii</span><span class="en-only">About Hydrogen Therapy</span></p>
+      <p class="mol-sub"><span class="cs-only">Jednoduše vysvětleno, bez zbytečného žargonu</span><span class="en-only">Simply explained, without unnecessary jargon</span></p>
+      <div class="molecule-grid">
+        <div class="molecule-cards">
+          <div class="molecule-card">
+            <div class="molecule-card-icon">H₂</div>
+            <div>
+              <h3><span class="cs-only">Co to je</span><span class="en-only">What It Is</span></h3>
+              <p><span class="cs-only">Molekulární vodík (H₂) je nejmenší molekula ve vesmíru. Díky své velikosti se může dostat prakticky kamkoli v těle – tam, kam větší molekuly nemají přístup.</span><span class="en-only">Molecular hydrogen (H₂) is the smallest molecule in the universe. Due to its size, it can reach practically anywhere in the body – places where larger molecules can't access.</span></p>
+            </div>
+          </div>
+          <div class="molecule-card">
+            <div class="molecule-card-icon">✦</div>
+            <div>
+              <h3><span class="cs-only">Proč se používá</span><span class="en-only">Why It's Used</span></h3>
+              <p><span class="cs-only">Lidé vodík využívají pro podporu regenerace, energie a celkové pohody. Není to lék, ale podpůrný wellness nástroj pro ty, kdo chtějí o sebe pečovat aktivněji.</span><span class="en-only">People use hydrogen to support recovery, energy, and overall wellbeing. It's not a medicine, but a supportive wellness tool for those who want a more active approach to their health.</span></p>
+            </div>
+          </div>
+          <div class="molecule-card">
+            <div class="molecule-card-icon">→</div>
+            <div>
+              <h3><span class="cs-only">Jak terapie probíhá</span><span class="en-only">How Therapy Works</span></h3>
+              <p><span class="cs-only">Konzultace → personalizovaný plán → pravidelné inhalace → průběžné sledování a úpravy programu dle Vašich potřeb.</span><span class="en-only">Consultation → personalized plan → regular inhalations → ongoing monitoring and adjustments based on your needs.</span></p>
+            </div>
+          </div>
+          <div>
+            <a href="/jak-to-funguje" class="btn btn-outline-orange"><span class="cs-only">Chci vědět více</span><span class="en-only">Learn More</span></a>
+          </div>
+        </div>
+        <div class="molecule-img">
+          <img src="/images/h2ope-product-side-CxX-ZJVh.png" alt="H2OPE produkt" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-section">
+    <div class="container">
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/AHFvYkVjhus"
+          title="H2OPE Hydrogen Therapy"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROČ NA KANCLU -->
+  <section class="office-section">
+    <div class="container">
+      <div class="office-grid">
+        <div>
+          <p class="section-label"><span class="cs-only">Pro firmy</span><span class="en-only">For Companies</span></p>
+          <h2 class="section-title"><span class="cs-only">Proč mít vodík na kanclu?</span><span class="en-only">Why Have Hydrogen at the Office?</span></h2>
+          <p class="section-sub"><span class="cs-only">Protože je to skvělý benefit pro zaměstnance, ale pozor ještě lepší pro zaměstnavatele 🙂</span><span class="en-only">Because it's a great benefit for employees, but watch out – it's even better for employers 🙂</span></p>
+          <ul class="office-list">
+            <li>
+              <span class="office-check">✓</span>
+              <span><span class="cs-only">Zaměstnanci mají lepší koncentraci a efektivitu</span><span class="en-only">Employees have better concentration and efficiency</span></span>
+            </li>
+            <li>
+              <span class="office-check">✓</span>
+              <span><span class="cs-only">Sníží se nemocnost ve firmě</span><span class="en-only">Reduced illness in the company</span></span>
+            </li>
+            <li>
+              <span class="office-check">✓</span>
+              <span><span class="cs-only">Lidé mají více energie</span><span class="en-only">People have more energy</span></span>
+            </li>
+          </ul>
+          <a href="/pro-firmy" class="btn btn-orange" style="margin-top:2rem;display:inline-flex"><span class="cs-only">Chci nezávaznou konzultaci a zjistit více</span><span class="en-only">I want a free consultation and more info</span></a>
+        </div>
+        <div class="office-visual">
+          <img src="/images/audience-corporate-Dn4o_vV9.jpg" alt="Firemní wellness" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAK FUNGUJE - 6 KROKŮ -->
+  <section class="steps-section section-gray">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-label"><span class="cs-only">Proces</span><span class="en-only">Process</span></p>
+        <h2 class="section-title"><span class="cs-only">Jak funguje vodíková terapie u H2OPE</span><span class="en-only">How Hydrogen Therapy Works at H2OPE</span></h2>
+        <p class="section-sub"><span class="cs-only">6 jednoduchých kroků k lepšímu zdraví</span><span class="en-only">6 simple steps to better health</span></p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3><span class="cs-only">Workshop a nastavení</span><span class="en-only">Workshop & Setup</span></h3>
+          <p><span class="cs-only">Přijedeme za vámi, vše vám ukážeme a společně nastavíme.</span><span class="en-only">We'll come to you, show you everything, and set it up together.</span></p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3><span class="cs-only">Rychlý dotazník</span><span class="en-only">Quick Questionnaire</span></h3>
+          <p><span class="cs-only">Pár otázek pro správné doporučení na míru.</span><span class="en-only">A few questions for the right personalized recommendation.</span></p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3><span class="cs-only">Vyhodnocení</span><span class="en-only">Assessment</span></h3>
+          <p><span class="cs-only">H2OPE Score a klíčové oblasti zaměření.</span><span class="en-only">H2OPE Score and key areas of focus.</span></p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3><span class="cs-only">Individuální plán</span><span class="en-only">Individual Plan</span></h3>
+          <p><span class="cs-only">Plán pro každého zaměstnance (volitelně testy pro větší přesnost).</span><span class="en-only">A plan for each employee (optional tests for greater accuracy).</span></p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">05</div>
+          <h3><span class="cs-only">Inhalace v kanceláři</span><span class="en-only">Office Inhalation</span></h3>
+          <p><span class="cs-only">Jednoduchá sezení podle plánu.</span><span class="en-only">Simple sessions according to plan.</span></p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">06</div>
+          <h3><span class="cs-only">Průběžná péče</span><span class="en-only">Ongoing Care</span></h3>
+          <p><span class="cs-only">Úpravy podle dat a zpětné vazby.</span><span class="en-only">Adjustments based on data and feedback.</span></p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:3rem">
+        <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Chci nezávaznou konzultaci</span><span class="en-only">I want a free consultation</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO KOHO - SLIDER -->
+  <section class="audience-section">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-label"><span class="cs-only">Cílové skupiny</span><span class="en-only">Target Groups</span></p>
+        <h2 class="section-title"><span class="cs-only">Pro koho je vodíková terapie</span><span class="en-only">Who Is Hydrogen Therapy For</span></h2>
+        <p class="section-sub"><span class="cs-only">Každý má jiné cíle. Vyberte oblast, která je vám nejbližší.</span><span class="en-only">Everyone has different goals. Select the area closest to you.</span></p>
+      </div>
+    </div>
+    <div class="audience-slider-wrap">
+      <div class="audience-slider" id="audienceSlider">
+        <div class="audience-card">
+          <img src="/images/audience-corporate-Dn4o_vV9.jpg" alt="Korporátní klienti" />
+          <div class="audience-card-body">
+            <div class="audience-tag"><span class="cs-only">H₂EKTICKÁ PRÁCE?</span><span class="en-only">H₂ECTIC WORK?</span></div>
+            <h3><span class="cs-only">Korporátní klienti</span><span class="en-only">Corporate Clients</span></h3>
+            <p><span class="cs-only">Wellness benefit pro zaměstnance. Podpora regenerace a energie během náročného pracovního období. Možnost on-site terapeutických dnů.</span><span class="en-only">Wellness benefit for employees. Supporting recovery and energy during demanding work periods. Option for on-site therapy days.</span></p>
+            <a href="/pro-firmy" class="btn btn-orange"><span class="cs-only">Řešení pro firmy →</span><span class="en-only">Business Solutions →</span></a>
+          </div>
+        </div>
+        <div class="audience-card">
+          <img src="/images/audience-oncology-CSZjQL9Q.jpg" alt="Onkologičtí pacienti" />
+          <div class="audience-card-body">
+            <h3><span class="cs-only">Onkologičtí pacienti</span><span class="en-only">Oncology Patients</span></h3>
+            <p><span class="cs-only">Podpůrná péče zaměřená na komfort, regeneraci a rovnováhu. Citlivý přístup pro období zvýšené zátěže.</span><span class="en-only">Supportive care focused on comfort, recovery, and balance. A sensitive approach for periods of increased stress.</span></p>
+            <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Individuální konzultace →</span><span class="en-only">Individual Consultation →</span></a>
+          </div>
+        </div>
+        <div class="audience-card">
+          <img src="/images/audience-autoimmune-D8k6ORg3.jpg" alt="Autoimunitní onemocnění" />
+          <div class="audience-card-body">
+            <h3><span class="cs-only">Autoimunitní onemocnění</span><span class="en-only">Autoimmune Conditions</span></h3>
+            <p><span class="cs-only">Podpora celkové rovnováhy a regenerace při dlouhodobých zdravotních výzvách. Jemný a zodpovědný přístup.</span><span class="en-only">Supporting overall balance and recovery in long-term health challenges. A gentle and responsible approach.</span></p>
+            <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Zjistit možnosti →</span><span class="en-only">Explore Options →</span></a>
+          </div>
+        </div>
+        <div class="audience-card">
+          <img src="/images/audience-family-DSpp3RU4.jpg" alt="Děti a rodina" />
+          <div class="audience-card-body">
+            <h3><span class="cs-only">Děti a rodina</span><span class="en-only">Children & Family</span></h3>
+            <p><span class="cs-only">Jemný přístup pro celou rodinu. Děti pouze v doprovodu rodičů. Bezpečnost a zodpovědnost na prvním místě.</span><span class="en-only">A gentle approach for the whole family. Children only with parental supervision. Safety and responsibility come first.</span></p>
+            <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Konzultace pro rodiče →</span><span class="en-only">Parent Consultation →</span></a>
+          </div>
+        </div>
+        <div class="audience-card">
+          <img src="/images/audience-sports-DLvN4tBA.jpg" alt="Sportovci" />
+          <div class="audience-card-body">
+            <h3><span class="cs-only">Sportovci</span><span class="en-only">Athletes</span></h3>
+            <p><span class="cs-only">Podpora regenerace, výkonnosti a tréninkové rovnováhy. Rychlejší zotavení před i po zátěži.</span><span class="en-only">Supporting recovery, performance, and training balance. Faster recovery before and after exertion.</span></p>
+            <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Pro sportovce →</span><span class="en-only">For Athletes →</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button class="slider-btn" id="slidePrev" aria-label="Předchozí">←</button>
+        <button class="slider-btn" id="slideNext" aria-label="Další">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROČ H2OPE -->
+  <section class="why-section section-gray">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-label"><span class="cs-only">Naše výhody</span><span class="en-only">Our Advantages</span></p>
+        <h2 class="section-title"><span class="cs-only">Proč H2OPE</span><span class="en-only">Why H2OPE</span></h2>
+        <p class="section-sub"><span class="cs-only">Co nás odlišuje od ostatních</span><span class="en-only">What sets us apart</span></p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">👤</div>
+          <h3><span class="cs-only">Individuální přístup</span><span class="en-only">Individual Approach</span></h3>
+          <p><span class="cs-only">Každý plán je přizpůsobený vašim cílům, zdravotnímu stavu a životnímu stylu.</span><span class="en-only">Each plan is tailored to your goals, health status, and lifestyle.</span></p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📊</div>
+          <h3><span class="cs-only">Strukturovaný proces</span><span class="en-only">Structured Process</span></h3>
+          <p><span class="cs-only">Od prvního dotazníku po průběžné úpravy – vše je jasné, měřitelné a transparentní.</span><span class="en-only">From the first questionnaire to ongoing adjustments – everything is clear, measurable, and transparent.</span></p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🤖</div>
+          <h3><span class="cs-only">FlowGen výhoda</span><span class="en-only">FlowGen Advantage</span></h3>
+          <p><span class="cs-only">Aplikace FlowGen vás provází celým procesem s AI doporučeními a sledováním pokroku.</span><span class="en-only">The FlowGen app guides you through the entire process with AI recommendations and progress tracking.</span></p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <h3><span class="cs-only">Zodpovědnost a vážnost</span><span class="en-only">Responsibility & Seriousness</span></h3>
+          <p><span class="cs-only">Nejsme alternativní medicína. Jsme wellness program s vážným přístupem k vašemu zdraví.</span><span class="en-only">We're not alternative medicine. We're a wellness program with a serious approach to your health.</span></p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💬</div>
+          <h3><span class="cs-only">Transparentní komunikace</span><span class="en-only">Transparent Communication</span></h3>
+          <p><span class="cs-only">Žádné tajemství, žádné zázračné sliby. Jasné informace o tom, co můžete očekávat.</span><span class="en-only">No secrets, no miraculous promises. Clear information about what to expect.</span></p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚙️</div>
+          <h3><span class="cs-only">Profesionální vybavení</span><span class="en-only">Professional Equipment</span></h3>
+          <p><span class="cs-only">Používáme špičkové přístroje pro vodíkovou terapii.</span><span class="en-only">We use state-of-the-art equipment for hydrogen therapy.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZKUŠENOSTI KLIENTŮ -->
+  <section class="testimonials-section section-gray">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-label"><span class="cs-only">Reference</span><span class="en-only">Reviews</span></p>
+        <h2 class="section-title"><span class="cs-only">Zkušenosti klientů</span><span class="en-only">Client Experiences</span></h2>
+        <p class="section-sub"><span class="cs-only">Co říkají ti, kteří už vodíkovou terapii vyzkoušeli</span><span class="en-only">What those who've tried hydrogen therapy say</span></p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote><span class="cs-only">„Po několika týdnech jsem si všiml, že se cítím odpočatější a mám více energie během dne."</span><span class="en-only">"After a few weeks I noticed I feel more rested and have more energy throughout the day."</span></blockquote>
+          <cite><span class="cs-only">— Klient, 45 let</span><span class="en-only">— Client, 45 years old</span></cite>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote><span class="cs-only">„Oceňuji strukturovaný přístup a aplikaci, která mi pomáhá udržet pravidelnost."</span><span class="en-only">"I appreciate the structured approach and the app that helps me stay consistent."</span></blockquote>
+          <cite><span class="cs-only">— Klientka, 38 let</span><span class="en-only">— Client, 38 years old</span></cite>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote><span class="cs-only">„Jako sportovec hledám cesty k rychlejší regeneraci. H2OPE mi v tom pomáhá."</span><span class="en-only">"As an athlete I'm always looking for ways to recover faster. H2OPE helps me with that."</span></blockquote>
+          <cite><span class="cs-only">— Profesionální sportovec</span><span class="en-only">— Professional Athlete</span></cite>
+        </div>
+      </div>
+      <p class="testimonials-note"><span class="cs-only">Toto jsou anonymizované zkušenosti klientů. Výsledky se mohou lišit.</span><span class="en-only">These are anonymized client experiences. Results may vary.</span></p>
+    </div>
+  </section>
+
+  <!-- FLOWGEN -->
+  <section class="flowgen-section" id="flowgen">
+    <div class="container">
+      <div class="flowgen-grid">
+        <div class="flowgen-text">
+          <p class="section-label"><span class="cs-only">Technologie</span><span class="en-only">Technology</span></p>
+          <h2 class="section-title"><span class="cs-only">Aplikace FlowGen</span><span class="en-only">FlowGen App</span></h2>
+          <p class="flowgen-tagline"><span class="cs-only">Vaše vodíková terapie pod kontrolou</span><span class="en-only">Your hydrogen therapy under control</span></p>
+          <p class="flowgen-desc"><span class="cs-only">FlowGen je aplikace, která vás provází celým procesem vodíkové terapie. Sleduje vaše sezení, analyzuje pokrok a poskytuje personalizovaná AI doporučení.</span><span class="en-only">FlowGen is an app that guides you through the entire hydrogen therapy process. It tracks your sessions, analyzes progress, and provides personalized AI recommendations.</span></p>
+          <div class="flowgen-features">
+            <div class="flowgen-feature">
+              <span class="ff-icon">📱</span>
+              <span><span class="cs-only">Mobilní aplikace</span><span class="en-only">Mobile App</span></span>
+            </div>
+            <div class="flowgen-feature">
+              <span class="ff-icon">📡</span>
+              <span><span class="cs-only">Sledování v reálném čase</span><span class="en-only">Real-time Tracking</span></span>
+            </div>
+            <div class="flowgen-feature">
+              <span class="ff-icon">🤖</span>
+              <span><span class="cs-only">AI doporučení</span><span class="en-only">AI Recommendations</span></span>
+            </div>
+          </div>
+          <a href="/pro-jednotlivce" class="btn btn-orange" style="margin-top:2rem;display:inline-flex"><span class="cs-only">Více o FlowGen</span><span class="en-only">Learn More About FlowGen</span></a>
+        </div>
+        <div class="flowgen-visual">
+          <img src="/images/h2ope-product-top-D4T-DMW8.png" alt="H2OPE přístroj" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2><span class="cs-only">Nejste si jistí jak vám vodík pomůže?</span><span class="en-only">Not sure how hydrogen can help you?</span></h2>
+      <p><span class="cs-only">Pojďme se spojit na 15 min, kde Vám vše ukážeme a vysvětlíme</span><span class="en-only">Let's connect for 15 min and we'll show and explain everything</span></p>
+      <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Chci nezávaznou konzultaci</span><span class="en-only">I want a free consultation</span></a>
+      <p class="cta-note"><span class="cs-only">Konzultace je nezávazná. Lidský přístup.</span><span class="en-only">Consultation is free. Human approach.</span></p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--blue) 0%, #0a5a7c 60%, #008fa8 100%);
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; pointer-events: none; }
+  .hero-wave {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    width: 100%;
+    opacity: 0.2;
+    object-fit: cover;
+    min-height: 300px;
+  }
+  .hero-content { position: relative; z-index: 1; padding-top: 8rem; padding-bottom: 5rem; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0,180,216,0.15);
+    border: 1px solid rgba(0,180,216,0.4);
+    color: var(--cyan);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-badge::before { content: '✦'; margin-right: 0.25rem; }
+  .hero-title {
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.08;
+    margin-bottom: 1.25rem;
+  }
+  .hero-sub { font-size: 1.2rem; opacity: 0.78; margin-bottom: 2.5rem; font-style: italic; }
+  .hero-stats { display: flex; align-items: center; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat-num { font-size: 1.75rem; font-weight: 900; color: var(--cyan); display: block; }
+  .hero-stat-label { font-size: 0.8rem; opacity: 0.65; }
+  .hero-stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* MOLECULE */
+  .molecule-section { padding: 5rem 0; }
+  .mol-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); display: block; margin-bottom: 0.25rem; }
+  .mol-sub { font-size: 1rem; color: var(--gray); margin-bottom: 3rem; display: block; }
+  .molecule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .molecule-cards { display: flex; flex-direction: column; gap: 1.25rem; }
+  .molecule-card {
+    background: var(--gray-light);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+  .molecule-card-icon {
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: var(--white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .molecule-card h3 { font-size: 1rem; font-weight: 700; color: var(--blue); margin-bottom: 0.35rem; }
+  .molecule-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+  .molecule-img { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(26,58,92,0.15); }
+  .molecule-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* VIDEO */
+  .video-section { padding: 0 0 5rem; }
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(26,58,92,0.2);
+  }
+  .video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* OFFICE */
+  .office-section { padding: 5rem 0; background: var(--white); }
+  .office-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .office-section .section-title { color: var(--blue); }
+  .office-section .section-sub { color: var(--gray); opacity: 1; }
+  .office-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+  .office-list li { display: flex; gap: 1rem; align-items: flex-start; font-size: 1.05rem; color: var(--text); }
+  .office-check {
+    width: 28px; height: 28px;
+    background: rgba(0,180,216,0.2);
+    color: var(--cyan);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; flex-shrink: 0; font-size: 0.85rem;
+  }
+  .office-visual { border-radius: 20px; overflow: hidden; }
+  .office-visual img { width: 100%; height: 420px; object-fit: cover; display: block; }
+
+  /* STEPS */
+  .steps-section { padding: 5rem 0; }
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem; }
+  .step-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.07);
+    position: relative;
+    overflow: hidden;
+  }
+  .step-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyan), var(--blue));
+  }
+  .step-num { font-size: 2.5rem; font-weight: 900; color: var(--cyan); opacity: 0.25; line-height: 1; margin-bottom: 0.75rem; }
+  .step-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
+  .step-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+
+  /* AUDIENCE SLIDER */
+  .audience-section { padding: 5rem 0; overflow: hidden; }
+  .audience-slider-wrap { margin-top: 2.5rem; }
+  .audience-slider {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 0.5rem max(1.5rem, calc((100vw - 1200px) / 2)) 1.5rem;
+  }
+  .audience-slider::-webkit-scrollbar { display: none; }
+  .audience-card {
+    flex: 0 0 340px;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(26,58,92,0.1);
+    scroll-snap-align: start;
+    transition: transform 0.25s;
+  }
+  .audience-card:hover { transform: translateY(-6px); }
+  .audience-card > img { width: 100%; height: 220px; object-fit: cover; display: block; }
+  .audience-card-body { padding: 1.5rem; }
+  .audience-tag {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+    color: var(--white);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.75rem;
+    border-radius: 100px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+  .audience-card-body h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 0.6rem; }
+  .audience-card-body p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; margin-bottom: 1.25rem; }
+  .slider-nav { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; }
+  .slider-btn {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    border: 2px solid var(--cyan);
+    background: transparent;
+    color: var(--cyan);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .slider-btn:hover { background: var(--cyan); color: var(--white); }
+
+  /* WHY */
+  .why-section { padding: 5rem 0; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem; }
+  .why-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.07);
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .why-card:hover { border-color: var(--cyan); transform: translateY(-4px); }
+  .why-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .why-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
+  .why-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+
+  /* FLOWGEN */
+  .flowgen-section { padding: 5rem 0; }
+  .flowgen-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .flowgen-tagline { font-size: 1.1rem; font-weight: 600; color: var(--cyan); margin-bottom: 1rem; }
+  .flowgen-desc { font-size: 1rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; }
+  .flowgen-features { display: flex; flex-direction: column; gap: 0.85rem; }
+  .flowgen-feature { display: flex; align-items: center; gap: 1rem; font-size: 0.95rem; font-weight: 500; }
+  .ff-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .flowgen-visual { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(26,58,92,0.15); }
+  .flowgen-visual img { width: 100%; display: block; }
+
+  @media (max-width: 900px) {
+    .molecule-grid, .office-grid, .flowgen-grid { grid-template-columns: 1fr; }
+    .steps-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .office-visual { order: -1; }
+    .office-visual img { height: 260px; }
+    .flowgen-visual { order: -1; }
+  }
+  @media (max-width: 600px) {
+    .steps-grid, .why-grid { grid-template-columns: 1fr; }
+    .hero-stat-divider { display: none; }
+    .audience-card { flex: 0 0 280px; }
+    .audience-card > img { height: 180px; }
+  }
+</style>
+
+<script>
+  const slider = document.getElementById('audienceSlider');
+  document.getElementById('slideNext')?.addEventListener('click', () => {
+    slider?.scrollBy({ left: 360, behavior: 'smooth' });
+  });
+  document.getElementById('slidePrev')?.addEventListener('click', () => {
+    slider?.scrollBy({ left: -360, behavior: 'smooth' });
+  });
+</script>

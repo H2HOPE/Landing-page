@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Jak to funguje – H2OPE" description="Strukturovaný proces od prvního kontaktu po průběžnou podporu. Zjistěte, jak vodíková terapie H2OPE funguje.">
+
+  <!-- BANNER -->
+  <div class="page-banner">
+    <div class="container">
+      <h1><span class="cs-only">Jak to funguje</span><span class="en-only">How It Works</span></h1>
+      <p><span class="cs-only">Strukturovaný proces od prvního kontaktu po průběžnou podporu.</span><span class="en-only">Structured process from first contact to ongoing support.</span></p>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-step">
+            <div class="step-icon">01</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="timeline-content">
+            <h2><span class="cs-only">Konzultace nebo Workshop</span><span class="en-only">Consultation or Workshop</span></h2>
+            <p><span class="cs-only">Přijedeme za vámi, vše vám ukážeme a společně nastavíme.<br />(poskytujeme také individuální konzultace)</span><span class="en-only">We'll come to you, show you everything, and set it up together.<br />(we also provide individual consultations)</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">
+            <div class="step-icon">02</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="timeline-content">
+            <h2><span class="cs-only">Nastavení FlowGen</span><span class="en-only">FlowGen Setup</span></h2>
+            <p><span class="cs-only">Propojíme vás s naší aplikací pro sledování individuálního pokroku.</span><span class="en-only">We'll connect you with our app for tracking individual progress.</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">
+            <div class="step-icon">03</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="timeline-content">
+            <h2><span class="cs-only">Pronájem stroje</span><span class="en-only">Machine Rental</span></h2>
+            <p><span class="cs-only">Pronajmete si od nás stroj k vám do kanceláře nebo přímo domů, abyste mohli pravidelně využívat benefitů vodíku.</span><span class="en-only">You rent a machine from us to your office or directly home, so you can regularly benefit from hydrogen.</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">
+            <div class="step-icon">04</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="timeline-content">
+            <h2><span class="cs-only">Pravidelná vodíková sezení</span><span class="en-only">Regular Hydrogen Sessions</span></h2>
+            <p><span class="cs-only">Absolvujete vodíková sezení dle vašeho plánu.</span><span class="en-only">You complete hydrogen sessions according to your plan.</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-step">
+            <div class="step-icon">05</div>
+          </div>
+          <div class="timeline-content">
+            <h2>H2OPE Score</h2>
+            <p><span class="cs-only">Analyzujeme data a optimalizujeme program.</span><span class="en-only">We analyze data and optimize the program.</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2><span class="cs-only">Nejste si jistí jak vám vodík pomůže?</span><span class="en-only">Not sure how hydrogen can help you?</span></h2>
+      <p><span class="cs-only">Pojďme se spojit na 15 min, kde Vám vše ukážeme a vysvětlíme</span><span class="en-only">Let's connect for 15 min and we'll show and explain everything</span></p>
+      <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Chci nezávaznou konzultaci</span><span class="en-only">I want a free consultation</span></a>
+      <p class="cta-note"><span class="cs-only">Konzultace je nezávazná. Lidský přístup.</span><span class="en-only">Consultation is free. Human approach.</span></p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .timeline-section { padding: 5rem 0; }
+
+  .timeline { display: flex; flex-direction: column; gap: 0; max-width: 820px; margin: 0 auto; }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: var(--white);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 900;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--cyan), transparent);
+    margin-top: 0.5rem;
+    min-height: 60px;
+  }
+
+  .timeline-content {
+    padding: 0 0 3rem;
+  }
+
+  .timeline-content h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .timeline-content p {
+    font-size: 1rem;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  /* HIGHLIGHTS */
+  .highlights-section { padding: 5rem 0; }
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .highlight-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.07);
+    transition: transform 0.25s;
+  }
+  .highlight-card:hover { transform: translateY(-4px); }
+  .highlight-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .highlight-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
+  .highlight-card p { font-size: 0.92rem; color: var(--gray); line-height: 1.6; }
+
+  @media (max-width: 700px) {
+    .timeline-item { grid-template-columns: 56px 1fr; gap: 1.25rem; }
+    .step-icon { width: 44px; height: 44px; font-size: 0.95rem; border-radius: 10px; }
+    .highlights-grid { grid-template-columns: 1fr; }
+    .timeline-content { padding-bottom: 2rem; }
+  }
+</style>
