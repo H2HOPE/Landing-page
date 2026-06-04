@@ -31,6 +31,10 @@ const apiKey = import.meta.env.PUBLIC_API_KEY;
         <label for="fieldEmail">Email</label>
         <input type="email" id="fieldEmail" name="email" required placeholder="vas@email.cz" />
       </div>
+      <div class="form-group">
+        <label for="fieldZprava"><span class="cs-only">Zpráva</span><span class="en-only">Message</span></label>
+        <textarea id="fieldZprava" name="zprava" rows="4" placeholder="Váš dotaz nebo zpráva..."></textarea>
+      </div>
       <div id="modalError" class="modal-alert-error" hidden>
         <span class="cs-only">Nepodařilo se odeslat formulář. Zkuste to prosím znovu.</span>
         <span class="en-only">Failed to send the form. Please try again.</span>
@@ -44,15 +48,8 @@ const apiKey = import.meta.env.PUBLIC_API_KEY;
       </button>
     </form>
     <div id="modalSuccess" class="modal-success" hidden>
-      <div class="success-icon">✓</div>
-      <h3>
-        <span class="cs-only">Děkujeme!</span>
-        <span class="en-only">Thank you!</span>
-      </h3>
-      <p>
-        <span class="cs-only">Vaše zpráva byla odeslána. Ozveme se vám brzy.</span>
-        <span class="en-only">Your message has been sent. We'll be in touch soon.</span>
-      </p>
+      <h3>Děkujeme!</h3>
+      <p>Vaše zpráva byla odeslána. Ozveme se vám brzy.</p>
     </div>
   </div>
 </div>
@@ -121,6 +118,7 @@ const apiKey = import.meta.env.PUBLIC_API_KEY;
       Jmeno: form.elements.namedItem('jmeno').value.trim(),
       Telefon: form.elements.namedItem('telefon').value.trim(),
       Email: form.elements.namedItem('email').value.trim(),
+      Zprava: form.elements.namedItem('zprava').value.trim(),
     };
 
     try {
