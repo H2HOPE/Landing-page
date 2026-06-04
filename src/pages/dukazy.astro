@@ -27,36 +27,6 @@ const faqs = [
     aEn: "Session length depends on your individual plan. Typically between 20 to 60 minutes per session. You'll receive specific recommendations after consultation and H2OPE Score setup."
   },
   {
-    qCs: "Je terapie vodíkem vhodná pro všechny?",
-    qEn: "Is hydrogen therapy suitable for everyone?",
-    aCs: "Vodíková terapie je obecně bezpečná pro většinu lidí. Existují však specifické skupiny (těhotné ženy, osoby s určitými zdravotními stavy), pro které konzultaci doporučujeme před zahájením.",
-    aEn: "Hydrogen therapy is generally safe for most people. However, there are specific groups (pregnant women, people with certain health conditions) for whom we recommend consultation before starting."
-  },
-  {
-    qCs: "Jak dlouho účinek vodíku vydrží?",
-    qEn: "How long do the effects of hydrogen last?",
-    aCs: "Účinky jsou individuální a závisí na frekvenci sezení, délce programu a vašem zdravotním stavu. Pro trvalé výsledky doporučujeme pravidelnou terapii dle individuálního plánu.",
-    aEn: "Effects are individual and depend on session frequency, program length, and your health status. For lasting results, we recommend regular therapy according to your individual plan."
-  },
-  {
-    qCs: "Může se terapie vodíkem kombinovat s léky?",
-    qEn: "Can hydrogen therapy be combined with medications?",
-    aCs: "Vodíková terapie je podpůrný wellness program a obecně nemá interakce s léky. Vždy však doporučujeme informovat vašeho lékaře, zejména pokud užíváte léky na závažná onemocnění.",
-    aEn: "Hydrogen therapy is a supportive wellness program and generally has no interactions with medications. However, we always recommend informing your doctor, especially if you're taking medication for serious conditions."
-  },
-  {
-    qCs: "V čem mi terapie vodíkem pomůže?",
-    qEn: "How will hydrogen therapy help me?",
-    aCs: "Klienti nejčastěji popisují zlepšení spánku, více energie, rychlejší regeneraci po fyzické zátěži a lepší celkovou pohodu. Výsledky jsou však individuální.",
-    aEn: "Clients most often report improved sleep, more energy, faster recovery after physical exertion, and better overall wellbeing. However, results are individual."
-  },
-  {
-    qCs: "Kolikrát týdně musím docházet na terapii vodíkem?",
-    qEn: "How many times a week do I need hydrogen therapy?",
-    aCs: "Při pronájmu stroje domů inhalujete dle svého plánu – typicky 1–2x denně. Frekvence závisí na vašich cílech a individuálním plánu.",
-    aEn: "When renting a machine for home use, you inhale according to your plan – typically 1–2 times daily. Frequency depends on your goals and individual plan."
-  },
-  {
     qCs: "Co je potřeba mít na terapii vodíkem?",
     qEn: "What do I need for hydrogen therapy?",
     aCs: "Stačí klidné místo a čas. Přístroj vám dodáme a vše nainstalujeme. Potřebujete pouze elektrickou zásuvku a 20–60 minut klidného času.",
@@ -81,9 +51,9 @@ const faqs = [
 
   <!-- BANNER -->
   <div class="page-banner">
-    <div class="container">
+    <div class="container text-center">
       <h1><span class="cs-only">Důkazy & FAQ</span><span class="en-only">Evidence & FAQ</span></h1>
-      <p><span class="cs-only">Transparentní informace, zdroje a odpovědi na časté otázky.</span><span class="en-only">Transparent information, sources, and answers to common questions.</span></p>
+      <p style="max-width:none"><span class="cs-only">Transparentní informace, zdroje a odpovědi na časté otázky.</span><span class="en-only">Transparent information, sources, and answers to common questions.</span></p>
     </div>
   </div>
 
@@ -120,7 +90,6 @@ const faqs = [
           <div class="faq-heading">
             <span class="faq-icon">❓</span>
             <div>
-              <p class="section-label">FAQ</p>
               <h2 class="section-title" style="margin-bottom:0">
                 <span class="cs-only">Podívejte se na nejčastější otázky našich klientů</span>
                 <span class="en-only">See the most common questions from our clients</span>
@@ -141,15 +110,6 @@ const faqs = [
             ))}
           </div>
         </div>
-        <div class="faq-sidebar">
-          <div class="faq-sidebar-img">
-            <img src="/images/h2ope-product-top-D4T-DMW8.png" alt="Molekulární vodík" />
-            <p class="faq-sidebar-caption">
-              <span class="cs-only">Molekulární vodík – nejmenší antioxidant</span>
-              <span class="en-only">Molecular hydrogen – the smallest antioxidant</span>
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -158,33 +118,30 @@ const faqs = [
   <section class="science-section section-gray">
     <div class="container">
       <div class="text-center">
-        <p class="section-label"><span class="cs-only">Věda za terapií</span><span class="en-only">Science Behind Therapy</span></p>
-        <h2 class="section-title"><span class="cs-only">Vědecké zdroje</span><span class="en-only">Scientific Sources</span></h2>
+        <h2 class="section-title"><span class="cs-only">📄 Vědecké zdroje</span><span class="en-only">📄 Scientific Sources</span></h2>
         <p class="section-sub"><span class="cs-only">Externí zdroje pro ty, kteří chtějí vědět více o vědeckém výzkumu molekulárního vodíku.</span><span class="en-only">External sources for those who want to learn more about the scientific research on molecular hydrogen.</span></p>
       </div>
       <div class="science-cards">
-        <div class="science-card">
-          <div class="sci-icon">🔬</div>
-          <div>
+        <a class="science-card" href="https://www.molecularhydrogeninstitute.com" target="_blank" rel="noopener">
+          <div class="sci-card-header">
             <h3>Molecular Hydrogen Institute</h3>
-            <p><span class="cs-only">Nezávislý výzkumný institut zaměřený na molekulární vodík. Databáze vědeckých studií a aktuální výzkum.</span><span class="en-only">An independent research institute focused on molecular hydrogen. Database of scientific studies and current research.</span></p>
-            <span class="sci-tag"><span class="cs-only">Výzkumný institut</span><span class="en-only">Research Institute</span></span>
+            <span class="sci-ext-icon">↗</span>
           </div>
-        </div>
-        <div class="science-card">
-          <div class="sci-icon">📄</div>
-          <div>
+          <p><span class="cs-only">Nezávislý výzkumný institut zaměřený na molekulární vodík.</span><span class="en-only">An independent research institute focused on molecular hydrogen.</span></p>
+        </a>
+        <a class="science-card" href="https://pubmed.ncbi.nlm.nih.gov/?term=molecular+hydrogen" target="_blank" rel="noopener">
+          <div class="sci-card-header">
             <h3>PubMed Studies</h3>
-            <p><span class="cs-only">Vědecké studie o molekulárním vodíku v největší světové databázi biomedicínské literatury.</span><span class="en-only">Scientific studies on molecular hydrogen in the world's largest biomedical literature database.</span></p>
-            <span class="sci-tag"><span class="cs-only">Vědecká databáze</span><span class="en-only">Scientific Database</span></span>
+            <span class="sci-ext-icon">↗</span>
           </div>
-        </div>
+          <p><span class="cs-only">Vědecké studie o molekulárním vodíku.</span><span class="en-only">Scientific studies on molecular hydrogen.</span></p>
+        </a>
       </div>
       <div class="science-disclaimer">
+        <span class="sci-disclaimer-icon">ℹ</span>
         <p>
-          <strong><span class="cs-only">Důležité upozornění:</span><span class="en-only">Important Notice:</span></strong>
-          <span class="cs-only"> H2OPE neposkytuje lékařské služby. Vodíková terapie je wellness program a nenahrazuje odbornou lékařskou péči. Informace na této stránce mají pouze informační charakter. Výsledky se mohou u jednotlivých klientů lišit.</span>
-          <span class="en-only"> H2OPE does not provide medical services. Hydrogen therapy is a wellness program and does not replace professional medical care. The information on this page is for informational purposes only. Results may vary among individual clients.</span>
+          <span class="cs-only">H2OPE neposkytuje lékařské služby. Vodíková terapie je wellness program a nenahrazuje odbornou lékařskou péči. Informace na této stránce mají pouze informační charakter.</span>
+          <span class="en-only">H2OPE does not provide medical services. Hydrogen therapy is a wellness program and does not replace professional medical care. The information on this page is for informational purposes only.</span>
         </p>
       </div>
     </div>
@@ -205,7 +162,7 @@ const faqs = [
 
   /* FAQ */
   .faq-section { padding: 5rem 0; }
-  .faq-layout { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: start; }
+  .faq-layout { display: block; }
   .faq-heading { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 2.5rem; }
   .faq-icon { font-size: 2rem; flex-shrink: 0; margin-top: 0.25rem; color: var(--cyan); }
   .faq-grid {
@@ -268,53 +225,44 @@ const faqs = [
 
   /* SCIENCE */
   .science-section { padding: 5rem 0; }
-  .science-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+  .science-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; max-width: 820px; margin-left: auto; margin-right: auto; }
   .science-card {
     background: var(--white);
     border-radius: 16px;
-    padding: 2rem;
+    padding: 1.5rem 1.75rem;
     display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
     box-shadow: 0 4px 20px rgba(26,58,92,0.07);
+    border: 1px solid rgba(26,58,92,0.07);
     transition: transform 0.25s;
+    color: inherit;
   }
   .science-card:hover { transform: translateY(-4px); }
-  .sci-icon {
-    font-size: 2rem;
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(135deg, rgba(26,58,92,0.08), rgba(0,180,216,0.12));
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .science-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--blue); margin-bottom: 0.4rem; }
-  .science-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; margin-bottom: 0.75rem; }
-  .sci-tag {
-    display: inline-block;
-    background: rgba(0,180,216,0.12);
-    color: var(--cyan);
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 0.2rem 0.65rem;
-    border-radius: 100px;
-    letter-spacing: 0.05em;
-  }
+  .sci-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+  .science-card h3 { font-size: 1rem; font-weight: 700; color: var(--blue); }
+  .sci-ext-icon { font-size: 1rem; color: var(--gray); flex-shrink: 0; margin-top: 0.1rem; }
+  .science-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
   .science-disclaimer {
     max-width: 760px;
     margin: 2.5rem auto 0;
-    background: rgba(26,58,92,0.06);
-    border-left: 4px solid var(--cyan);
-    border-radius: 0 12px 12px 0;
-    padding: 1.25rem 1.5rem;
+    background: rgba(26,58,92,0.05);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
     font-size: 0.88rem;
     color: var(--gray);
     line-height: 1.65;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
-  .science-disclaimer strong { color: var(--blue); }
+  .sci-disclaimer-icon {
+    font-size: 1rem;
+    color: var(--gray);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    font-style: normal;
+  }
 
   @media (max-width: 900px) {
     .faq-layout { grid-template-columns: 1fr; }

@@ -47,15 +47,20 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
         <span></span><span></span><span></span>
       </button>
       <div class="nav-links" id="navLinks">
-        <a href="/" class={`nav-link ${isActive('/') && pathname === '/' ? 'active' : ''}`}><span class="cs-only">Úvod</span><span class="en-only">Home</span></a>
-        <a href="/jak-to-funguje" class={`nav-link ${isActive('/jak-to-funguje') ? 'active' : ''}`}><span class="cs-only">Jak to funguje</span><span class="en-only">How It Works</span></a>
-        <a href="/pro-firmy" class={`nav-link ${isActive('/pro-firmy') ? 'active' : ''}`}><span class="cs-only">Pro firmy</span><span class="en-only">For Companies</span></a>
-        <a href="/pro-jednotlivce" class={`nav-link ${isActive('/pro-jednotlivce') ? 'active' : ''}`}><span class="cs-only">Pro jednotlivce</span><span class="en-only">For Individuals</span></a>
-        <a href="/dukazy" class={`nav-link ${isActive('/dukazy') ? 'active' : ''}`}><span class="cs-only">Důkazy & FAQ</span><span class="en-only">Evidence & FAQ</span></a>
-        <button id="langToggle" class="nav-link nav-lang" type="button" aria-label="Switch language">
-          <span class="cs-only">EN</span><span class="en-only">CS</span>
-        </button>
-        <a href="#kontakt" class="btn btn-orange nav-cta"><span class="cs-only">Kontakt</span><span class="en-only">Contact</span></a>
+        <div class="nav-pages">
+          <a href="/" class={`nav-link ${isActive('/') && pathname === '/' ? 'active' : ''}`}><span class="cs-only">Úvod</span><span class="en-only">Home</span></a>
+          <a href="/jak-to-funguje" class={`nav-link ${isActive('/jak-to-funguje') ? 'active' : ''}`}><span class="cs-only">Jak to funguje</span><span class="en-only">How It Works</span></a>
+          <a href="/pro-firmy" class={`nav-link ${isActive('/pro-firmy') ? 'active' : ''}`}><span class="cs-only">Pro firmy</span><span class="en-only">For Companies</span></a>
+          <a href="/pro-jednotlivce" class={`nav-link ${isActive('/pro-jednotlivce') ? 'active' : ''}`}><span class="cs-only">Pro jednotlivce</span><span class="en-only">For Individuals</span></a>
+          <a href="/dukazy" class={`nav-link ${isActive('/dukazy') ? 'active' : ''}`}><span class="cs-only">Důkazy & FAQ</span><span class="en-only">Evidence & FAQ</span></a>
+        </div>
+        <div class="nav-actions">
+          <button id="langToggle" class="nav-link nav-lang" type="button" aria-label="Switch language">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="cs-only">EN</span><span class="en-only">CS</span>
+          </button>
+          <a href="#kontakt" class="btn btn-orange nav-cta"><span class="cs-only">Kontakt</span><span class="en-only">Contact</span></a>
+        </div>
       </div>
     </div>
   </nav>
@@ -253,10 +258,23 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
   .nav-logo img { height: 38px; width: auto; }
   .nav.nav-transparent:not(.scrolled) .nav-logo img { filter: brightness(0) invert(1); }
   .nav-links {
+    flex: 1;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+  .nav-pages {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.25rem;
-    margin-left: auto;
+  }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
   }
   .nav-link {
     color: var(--blue);
@@ -278,6 +296,9 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
     font-size: 0.85rem;
     padding: 0.35rem 0.75rem;
     border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
   }
   .nav-lang:hover { background: rgba(26,58,92,0.07); }
   .nav-cta { margin-left: 0.5rem; padding: 0.5rem 1.25rem; font-size: 0.9rem; }
@@ -364,7 +385,7 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
     position: absolute;
     inset: 0;
     background: url('/images/page-header-banner-YJdgZXWe.png') center/cover no-repeat;
-    opacity: 0.08;
+    opacity: 0.18;
   }
   .page-banner .container { position: relative; z-index: 1; }
   .page-banner h1 {
@@ -378,15 +399,24 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
     max-width: 560px;
   }
 
-  /* CTA SECTION */
-  .cta-section {
+  /* CTA WRAP / CARD */
+  .cta-wrap { padding: 5rem 0; }
+  .cta-card {
     background: linear-gradient(135deg, var(--blue) 0%, #0d6e8f 100%);
     color: var(--white);
+    border-radius: 24px;
+    padding: 4rem 3rem;
     text-align: center;
-    padding: 5rem 0;
   }
-  .cta-section h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; }
-  .cta-section p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 2rem; }
+  .cta-pre { font-size: 0.95rem; opacity: 0.75; margin-bottom: 1rem; }
+  .cta-card h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .cta-note { font-size: 0.85rem; opacity: 0.65; margin-top: 1rem; }
 
   /* STATS */
@@ -483,10 +513,21 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
       z-index: -1;
     }
     .nav-links.open { display: flex; z-index: 999; }
+    .nav-pages {
+      flex: unset;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nav-actions {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
     .nav-link { font-size: 1.1rem; padding: 0.75rem 2rem; }
     .nav-cta { margin-left: 0; padding: 0.75rem 2.5rem; }
     .footer-grid { grid-template-columns: 1fr 1fr; }

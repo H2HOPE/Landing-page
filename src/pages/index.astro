@@ -42,53 +42,55 @@ import Layout from '../layouts/Layout.astro';
   <!-- CO JE MOLEKULÁRNÍ VODÍK -->
   <section class="molecule-section">
     <div class="container">
-      <p class="mol-label"><span class="cs-only">O vodíkové terapii</span><span class="en-only">About Hydrogen Therapy</span></p>
-      <p class="mol-sub"><span class="cs-only">Jednoduše vysvětleno, bez zbytečného žargonu</span><span class="en-only">Simply explained, without unnecessary jargon</span></p>
-      <div class="molecule-grid">
-        <div class="molecule-cards">
-          <div class="molecule-card">
-            <div class="molecule-card-icon">H₂</div>
-            <div>
-              <h3><span class="cs-only">Co to je</span><span class="en-only">What It Is</span></h3>
-              <p><span class="cs-only">Molekulární vodík (H₂) je nejmenší molekula ve vesmíru. Díky své velikosti se může dostat prakticky kamkoli v těle – tam, kam větší molekuly nemají přístup.</span><span class="en-only">Molecular hydrogen (H₂) is the smallest molecule in the universe. Due to its size, it can reach practically anywhere in the body – places where larger molecules can't access.</span></p>
-            </div>
+      <div class="text-center mol-header">
+        <h2 class="mol-title"><span class="cs-only">Co je molekulární vodík?</span><span class="en-only">What is Molecular Hydrogen?</span></h2>
+        <p class="mol-sub"><span class="cs-only">Jednoduše vysvětleno, bez zbytečného žargonu</span><span class="en-only">Simply explained, without unnecessary jargon</span></p>
+      </div>
+      <div class="mol-grid">
+        <div class="mol-card">
+          <div class="mol-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2a10 4.5 0 0 1 0 9"/>
+              <path d="M12 2a10 4.5 0 0 0 0 9"/>
+              <ellipse cx="12" cy="12" rx="10" ry="4.5"/>
+              <path d="M12 15a10 4.5 0 0 1 0 7"/>
+              <path d="M12 15a10 4.5 0 0 0 0 7"/>
+            </svg>
           </div>
-          <div class="molecule-card">
-            <div class="molecule-card-icon">✦</div>
-            <div>
-              <h3><span class="cs-only">Proč se používá</span><span class="en-only">Why It's Used</span></h3>
-              <p><span class="cs-only">Lidé vodík využívají pro podporu regenerace, energie a celkové pohody. Není to lék, ale podpůrný wellness nástroj pro ty, kdo chtějí o sebe pečovat aktivněji.</span><span class="en-only">People use hydrogen to support recovery, energy, and overall wellbeing. It's not a medicine, but a supportive wellness tool for those who want a more active approach to their health.</span></p>
-            </div>
-          </div>
-          <div class="molecule-card">
-            <div class="molecule-card-icon">→</div>
-            <div>
-              <h3><span class="cs-only">Jak terapie probíhá</span><span class="en-only">How Therapy Works</span></h3>
-              <p><span class="cs-only">Konzultace → personalizovaný plán → pravidelné inhalace → průběžné sledování a úpravy programu dle Vašich potřeb.</span><span class="en-only">Consultation → personalized plan → regular inhalations → ongoing monitoring and adjustments based on your needs.</span></p>
-            </div>
-          </div>
-          <div>
-            <a href="/jak-to-funguje" class="btn btn-outline-orange"><span class="cs-only">Chci vědět více</span><span class="en-only">Learn More</span></a>
-          </div>
+          <h3><span class="cs-only">Co to je</span><span class="en-only">What It Is</span></h3>
+          <p><span class="cs-only">Molekulární vodík (H₂) je nejmenší molekula ve vesmíru. Díky své velikosti se může dostat prakticky kamkoli v těle – tam, kam větší molekuly nemají přístup.</span><span class="en-only">Molecular hydrogen (H₂) is the smallest molecule in the universe. Due to its size, it can reach practically anywhere in the body.</span></p>
         </div>
-        <div class="molecule-img">
-          <img src="/images/h2ope-product-side-CxX-ZJVh.png" alt="H2OPE produkt" />
+        <div class="mol-card">
+          <div class="mol-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3><span class="cs-only">Proč se používá</span><span class="en-only">Why It's Used</span></h3>
+          <p><span class="cs-only">Lidé vodík využívají pro podporu regenerace, energie a celkové pohody. Není to lék, ale podpůrný wellness nástroj pro ty, kdo chtějí o sebe pečovat aktivněji.</span><span class="en-only">People use hydrogen to support recovery, energy, and overall wellbeing. It's not a medicine, but a supportive wellness tool.</span></p>
+        </div>
+        <div class="mol-card">
+          <div class="mol-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <path d="M9 12h6M9 16h4"/>
+            </svg>
+          </div>
+          <h3><span class="cs-only">Jak terapie probíhá</span><span class="en-only">How Therapy Works</span></h3>
+          <p><span class="cs-only">Konzultace → personalizovaný plán → pravidelné inhalace → průběžné sledování a úpravy programu dle Vašich potřeb.</span><span class="en-only">Consultation → personalized plan → regular inhalations → ongoing monitoring and adjustments based on your needs.</span></p>
+        </div>
+        <div class="mol-card mol-cta-card">
+          <p class="mol-cta-label"><span class="cs-only">Zajímá vás více?</span><span class="en-only">Want to know more?</span></p>
+          <a href="/jak-to-funguje" class="btn btn-orange"><span class="cs-only">Chci vědět více →</span><span class="en-only">Learn More →</span></a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-  <section class="video-section">
-    <div class="container">
-      <div class="video-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/AHFvYkVjhus"
-          title="H2OPE Hydrogen Therapy"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+      <div class="mol-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--cyan)">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span><span class="cs-only">H2OPE neposkytuje lékařské služby. Vodíková terapie je wellness program a nenahrazuje odbornou lékařskou péči.</span><span class="en-only">H2OPE does not provide medical services. Hydrogen therapy is a wellness program and does not replace professional medical care.</span></span>
       </div>
     </div>
   </section>
@@ -124,11 +126,25 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- VIDEO -->
+  <section class="video-section">
+    <div class="container">
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/AHFvYkVjhus"
+          title="H2OPE Hydrogen Therapy"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- JAK FUNGUJE - 6 KROKŮ -->
   <section class="steps-section section-gray">
     <div class="container">
       <div class="text-center">
-        <p class="section-label"><span class="cs-only">Proces</span><span class="en-only">Process</span></p>
         <h2 class="section-title"><span class="cs-only">Jak funguje vodíková terapie u H2OPE</span><span class="en-only">How Hydrogen Therapy Works at H2OPE</span></h2>
         <p class="section-sub"><span class="cs-only">6 jednoduchých kroků k lepšímu zdraví</span><span class="en-only">6 simple steps to better health</span></p>
       </div>
@@ -170,63 +186,126 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- PRO KOHO - SLIDER -->
+  <!-- PRO KOHO - CAROUSEL -->
   <section class="audience-section">
     <div class="container">
       <div class="text-center">
-        <p class="section-label"><span class="cs-only">Cílové skupiny</span><span class="en-only">Target Groups</span></p>
         <h2 class="section-title"><span class="cs-only">Pro koho je vodíková terapie</span><span class="en-only">Who Is Hydrogen Therapy For</span></h2>
         <p class="section-sub"><span class="cs-only">Každý má jiné cíle. Vyberte oblast, která je vám nejbližší.</span><span class="en-only">Everyone has different goals. Select the area closest to you.</span></p>
       </div>
+      <div class="aud-filters">
+        <p class="aud-filters-label"><span class="cs-only">Poznáte se v tom?</span><span class="en-only">Can you relate?</span></p>
+        <div class="aud-tabs-row">
+          <button class="aud-tab active" data-goto="0" data-category="work">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 1 4 0"/></svg>
+            <span class="cs-only">H₂EKTICKÁ PRÁCE?</span><span class="en-only">H₂ECTIC WORK?</span>
+          </button>
+          <button class="aud-tab" data-goto="3" data-category="home">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span class="cs-only">H₂URIKÁN DOMA?</span><span class="en-only">H₂URRICANE AT HOME?</span>
+          </button>
+          <button class="aud-tab" data-goto="4" data-category="sports">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <span class="cs-only">H₂ROZNÉ POČASÍ?</span><span class="en-only">H₂ARIABLE WEATHER?</span>
+          </button>
+        </div>
+        <p class="aud-hashtag">#frcimenavodiku</p>
+      </div>
     </div>
-    <div class="audience-slider-wrap">
-      <div class="audience-slider" id="audienceSlider">
-        <div class="audience-card">
+
+    <div class="aud-carousel-wrap">
+      <button class="aud-nav aud-nav-prev" id="audPrev" aria-label="Předchozí">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <div class="aud-stage" id="audStage">
+        <div class="aud-card" data-index="0" data-category="work">
           <img src="/images/audience-corporate-Dn4o_vV9.jpg" alt="Korporátní klienti" />
-          <div class="audience-card-body">
-            <div class="audience-tag"><span class="cs-only">H₂EKTICKÁ PRÁCE?</span><span class="en-only">H₂ECTIC WORK?</span></div>
-            <h3><span class="cs-only">Korporátní klienti</span><span class="en-only">Corporate Clients</span></h3>
-            <p><span class="cs-only">Wellness benefit pro zaměstnance. Podpora regenerace a energie během náročného pracovního období. Možnost on-site terapeutických dnů.</span><span class="en-only">Wellness benefit for employees. Supporting recovery and energy during demanding work periods. Option for on-site therapy days.</span></p>
-            <a href="/pro-firmy" class="btn btn-orange"><span class="cs-only">Řešení pro firmy →</span><span class="en-only">Business Solutions →</span></a>
+          <div class="aud-overlay">
+            <div class="aud-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 1 4 0"/></svg>
+            </div>
+            <div class="aud-card-content">
+              <h3><span class="cs-only">Korporátní klienti</span><span class="en-only">Corporate Clients</span></h3>
+              <span class="aud-tag"><span class="cs-only">H₂EKTICKÁ PRÁCE?</span><span class="en-only">H₂ECTIC WORK?</span></span>
+              <p><span class="cs-only">Wellness benefit pro zaměstnance. Podpora regenerace a energie během náročného pracovního období. Možnost on-site terapeutických dnů.</span><span class="en-only">Wellness benefit for employees. Supporting recovery and energy during demanding work periods.</span></p>
+              <a href="/pro-firmy" class="aud-link"><span class="cs-only">Řešení pro firmy →</span><span class="en-only">Business Solutions →</span></a>
+            </div>
           </div>
         </div>
-        <div class="audience-card">
+
+        <div class="aud-card" data-index="1" data-category="other">
           <img src="/images/audience-oncology-CSZjQL9Q.jpg" alt="Onkologičtí pacienti" />
-          <div class="audience-card-body">
-            <h3><span class="cs-only">Onkologičtí pacienti</span><span class="en-only">Oncology Patients</span></h3>
-            <p><span class="cs-only">Podpůrná péče zaměřená na komfort, regeneraci a rovnováhu. Citlivý přístup pro období zvýšené zátěže.</span><span class="en-only">Supportive care focused on comfort, recovery, and balance. A sensitive approach for periods of increased stress.</span></p>
-            <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Individuální konzultace →</span><span class="en-only">Individual Consultation →</span></a>
+          <div class="aud-overlay">
+            <div class="aud-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div class="aud-card-content">
+              <h3><span class="cs-only">Onkologičtí pacienti</span><span class="en-only">Oncology Patients</span></h3>
+              <span class="aud-tag"><span class="cs-only">PODPŮRNÁ PÉČE</span><span class="en-only">SUPPORTIVE CARE</span></span>
+              <p><span class="cs-only">Podpůrná péče zaměřená na komfort, regeneraci a rovnováhu. Citlivý přístup pro období zvýšené zátěže.</span><span class="en-only">Supportive care focused on comfort, recovery, and balance. A sensitive approach for periods of increased stress.</span></p>
+              <a href="#kontakt" class="aud-link"><span class="cs-only">Individuální konzultace →</span><span class="en-only">Individual Consultation →</span></a>
+            </div>
           </div>
         </div>
-        <div class="audience-card">
+
+        <div class="aud-card" data-index="2" data-category="other">
           <img src="/images/audience-autoimmune-D8k6ORg3.jpg" alt="Autoimunitní onemocnění" />
-          <div class="audience-card-body">
-            <h3><span class="cs-only">Autoimunitní onemocnění</span><span class="en-only">Autoimmune Conditions</span></h3>
-            <p><span class="cs-only">Podpora celkové rovnováhy a regenerace při dlouhodobých zdravotních výzvách. Jemný a zodpovědný přístup.</span><span class="en-only">Supporting overall balance and recovery in long-term health challenges. A gentle and responsible approach.</span></p>
-            <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Zjistit možnosti →</span><span class="en-only">Explore Options →</span></a>
+          <div class="aud-overlay">
+            <div class="aud-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="aud-card-content">
+              <h3><span class="cs-only">Autoimunitní onemocnění</span><span class="en-only">Autoimmune Conditions</span></h3>
+              <span class="aud-tag"><span class="cs-only">DLOUHODOBÁ PÉČE</span><span class="en-only">LONG-TERM CARE</span></span>
+              <p><span class="cs-only">Podpora celkové rovnováhy a regenerace při dlouhodobých zdravotních výzvách. Jemný a zodpovědný přístup.</span><span class="en-only">Supporting overall balance and recovery in long-term health challenges.</span></p>
+              <a href="#kontakt" class="aud-link"><span class="cs-only">Zjistit možnosti →</span><span class="en-only">Explore Options →</span></a>
+            </div>
           </div>
         </div>
-        <div class="audience-card">
+
+        <div class="aud-card" data-index="3" data-category="home">
           <img src="/images/audience-family-DSpp3RU4.jpg" alt="Děti a rodina" />
-          <div class="audience-card-body">
-            <h3><span class="cs-only">Děti a rodina</span><span class="en-only">Children & Family</span></h3>
-            <p><span class="cs-only">Jemný přístup pro celou rodinu. Děti pouze v doprovodu rodičů. Bezpečnost a zodpovědnost na prvním místě.</span><span class="en-only">A gentle approach for the whole family. Children only with parental supervision. Safety and responsibility come first.</span></p>
-            <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Konzultace pro rodiče →</span><span class="en-only">Parent Consultation →</span></a>
+          <div class="aud-overlay">
+            <div class="aud-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="aud-card-content">
+              <h3><span class="cs-only">Děti a rodina</span><span class="en-only">Children & Family</span></h3>
+              <span class="aud-tag"><span class="cs-only">H₂URIKÁN DOMA?</span><span class="en-only">H₂URRICANE AT HOME?</span></span>
+              <p><span class="cs-only">Jemný přístup pro celou rodinu. Děti pouze v doprovodu rodičů. Bezpečnost a zodpovědnost na prvním místě.</span><span class="en-only">A gentle approach for the whole family. Children only with parental supervision.</span></p>
+              <a href="#kontakt" class="aud-link"><span class="cs-only">Konzultace pro rodiče →</span><span class="en-only">Parent Consultation →</span></a>
+            </div>
           </div>
         </div>
-        <div class="audience-card">
+
+        <div class="aud-card" data-index="4" data-category="sports">
           <img src="/images/audience-sports-DLvN4tBA.jpg" alt="Sportovci" />
-          <div class="audience-card-body">
-            <h3><span class="cs-only">Sportovci</span><span class="en-only">Athletes</span></h3>
-            <p><span class="cs-only">Podpora regenerace, výkonnosti a tréninkové rovnováhy. Rychlejší zotavení před i po zátěži.</span><span class="en-only">Supporting recovery, performance, and training balance. Faster recovery before and after exertion.</span></p>
-            <a href="#kontakt" class="btn btn-orange"><span class="cs-only">Pro sportovce →</span><span class="en-only">For Athletes →</span></a>
+          <div class="aud-overlay">
+            <div class="aud-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="aud-card-content">
+              <h3><span class="cs-only">Sportovci</span><span class="en-only">Athletes</span></h3>
+              <span class="aud-tag"><span class="cs-only">H₂ROZNÉ POČASÍ?</span><span class="en-only">H₂ARIABLE WEATHER?</span></span>
+              <p><span class="cs-only">Podpora regenerace, výkonnosti a tréninkové rovnováhy. Rychlejší zotavení před i po zátěži.</span><span class="en-only">Supporting recovery, performance, and training balance.</span></p>
+              <a href="#kontakt" class="aud-link"><span class="cs-only">Pro sportovce →</span><span class="en-only">For Athletes →</span></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="slider-nav">
-        <button class="slider-btn" id="slidePrev" aria-label="Předchozí">←</button>
-        <button class="slider-btn" id="slideNext" aria-label="Další">→</button>
-      </div>
+
+      <button class="aud-nav aud-nav-next" id="audNext" aria-label="Další">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="aud-dots" id="audDots">
+      <button class="aud-dot active" data-index="0"></button>
+      <button class="aud-dot" data-index="1"></button>
+      <button class="aud-dot" data-index="2"></button>
+      <button class="aud-dot" data-index="3"></button>
+      <button class="aud-dot" data-index="4"></button>
     </div>
   </section>
 
@@ -234,7 +313,6 @@ import Layout from '../layouts/Layout.astro';
   <section class="why-section section-gray">
     <div class="container">
       <div class="text-center">
-        <p class="section-label"><span class="cs-only">Naše výhody</span><span class="en-only">Our Advantages</span></p>
         <h2 class="section-title"><span class="cs-only">Proč H2OPE</span><span class="en-only">Why H2OPE</span></h2>
         <p class="section-sub"><span class="cs-only">Co nás odlišuje od ostatních</span><span class="en-only">What sets us apart</span></p>
       </div>
@@ -264,10 +342,31 @@ import Layout from '../layouts/Layout.astro';
           <h3><span class="cs-only">Transparentní komunikace</span><span class="en-only">Transparent Communication</span></h3>
           <p><span class="cs-only">Žádné tajemství, žádné zázračné sliby. Jasné informace o tom, co můžete očekávat.</span><span class="en-only">No secrets, no miraculous promises. Clear information about what to expect.</span></p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">⚙️</div>
-          <h3><span class="cs-only">Profesionální vybavení</span><span class="en-only">Professional Equipment</span></h3>
-          <p><span class="cs-only">Používáme špičkové přístroje pro vodíkovou terapii.</span><span class="en-only">We use state-of-the-art equipment for hydrogen therapy.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESIONÁLNÍ VYBAVENÍ -->
+  <section class="equipment-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title"><span class="cs-only">Profesionální vybavení</span><span class="en-only">Professional Equipment</span></h2>
+        <p class="section-sub"><span class="cs-only">Používáme špičkové přístroje pro vodíkovou terapii</span><span class="en-only">We use state-of-the-art equipment for hydrogen therapy</span></p>
+      </div>
+      <div class="equipment-grid">
+        <div class="equipment-card">
+          <div class="equipment-img">
+            <img src="/images/h2ope-product-side-CxX-ZJVh.png" alt="H2OPE přístroj – přenosný model" />
+          </div>
+          <h3><span class="cs-only">Přenosný přístroj H2OPE</span><span class="en-only">H2OPE Portable Device</span></h3>
+          <p><span class="cs-only">Kompaktní a přenosné řešení pro vodíkovou terapii kdekoli.</span><span class="en-only">Compact and portable solution for hydrogen therapy anywhere.</span></p>
+        </div>
+        <div class="equipment-card">
+          <div class="equipment-img">
+            <img src="/images/h2ope-product-top-D4T-DMW8.png" alt="H2OPE přístroj – profesionální model" />
+          </div>
+          <h3><span class="cs-only">Profesionální přístroj H2OPE</span><span class="en-only">H2OPE Professional Device</span></h3>
+          <p><span class="cs-only">Výkonné zařízení pro firemní a klinické využití.</span><span class="en-only">Powerful device for corporate and clinical use.</span></p>
         </div>
       </div>
     </div>
@@ -277,7 +376,6 @@ import Layout from '../layouts/Layout.astro';
   <section class="testimonials-section section-gray">
     <div class="container">
       <div class="text-center">
-        <p class="section-label"><span class="cs-only">Reference</span><span class="en-only">Reviews</span></p>
         <h2 class="section-title"><span class="cs-only">Zkušenosti klientů</span><span class="en-only">Client Experiences</span></h2>
         <p class="section-sub"><span class="cs-only">Co říkají ti, kteří už vodíkovou terapii vyzkoušeli</span><span class="en-only">What those who've tried hydrogen therapy say</span></p>
       </div>
@@ -307,7 +405,6 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="flowgen-grid">
         <div class="flowgen-text">
-          <p class="section-label"><span class="cs-only">Technologie</span><span class="en-only">Technology</span></p>
           <h2 class="section-title"><span class="cs-only">Aplikace FlowGen</span><span class="en-only">FlowGen App</span></h2>
           <p class="flowgen-tagline"><span class="cs-only">Vaše vodíková terapie pod kontrolou</span><span class="en-only">Your hydrogen therapy under control</span></p>
           <p class="flowgen-desc"><span class="cs-only">FlowGen je aplikace, která vás provází celým procesem vodíkové terapie. Sleduje vaše sezení, analyzuje pokrok a poskytuje personalizovaná AI doporučení.</span><span class="en-only">FlowGen is an app that guides you through the entire hydrogen therapy process. It tracks your sessions, analyzes progress, and provides personalized AI recommendations.</span></p>
@@ -335,12 +432,14 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
+  <section class="cta-wrap">
     <div class="container">
-      <h2><span class="cs-only">Nejste si jistí jak vám vodík pomůže?</span><span class="en-only">Not sure how hydrogen can help you?</span></h2>
-      <p><span class="cs-only">Pojďme se spojit na 15 min, kde Vám vše ukážeme a vysvětlíme</span><span class="en-only">Let's connect for 15 min and we'll show and explain everything</span></p>
-      <button type="button" class="btn btn-orange" data-open-modal="contact"><span class="cs-only">Chci nezávaznou konzultaci</span><span class="en-only">I want a free consultation</span></button>
-      <p class="cta-note"><span class="cs-only">Konzultace je nezávazná. Lidský přístup.</span><span class="en-only">Consultation is free. Human approach.</span></p>
+      <div class="cta-card">
+        <p class="cta-pre"><span class="cs-only">Nejste si jistí jak vám vodík pomůže?</span><span class="en-only">Not sure how hydrogen can help you?</span></p>
+        <h2><span class="cs-only">Pojďme se spojit na 15 min, kde Vám vše ukážeme a vysvětlíme</span><span class="en-only">Let's connect for 15 min and we'll show and explain everything</span></h2>
+        <button type="button" class="btn btn-orange" data-open-modal="contact"><span class="cs-only">Chci nezávaznou konzultaci</span><span class="en-only">I want a free consultation</span> →</button>
+        <p class="cta-note"><span class="cs-only">Konzultace je nezávazná. Lidský přístup.</span><span class="en-only">Consultation is free. Human approach.</span></p>
+      </div>
     </div>
   </section>
 
@@ -398,36 +497,65 @@ import Layout from '../layouts/Layout.astro';
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   /* MOLECULE */
-  .molecule-section { padding: 5rem 0; }
-  .mol-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); display: block; margin-bottom: 0.25rem; }
-  .mol-sub { font-size: 1rem; color: var(--gray); margin-bottom: 3rem; display: block; }
-  .molecule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-  .molecule-cards { display: flex; flex-direction: column; gap: 1.25rem; }
-  .molecule-card {
-    background: var(--gray-light);
-    border-radius: 14px;
-    padding: 1.5rem;
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
+  .molecule-section { padding: 5rem 0; background: var(--gray-light); }
+  .mol-header { margin-bottom: 3rem; }
+  .mol-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
   }
-  .molecule-card-icon {
-    width: 46px;
-    height: 46px;
-    background: linear-gradient(135deg, var(--blue), var(--cyan));
-    color: var(--white);
-    border-radius: 12px;
+  .mol-sub { font-size: 1rem; color: var(--gray); display: block; }
+  .mol-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+  .mol-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 2px 16px rgba(26,58,92,0.07);
+    display: flex;
+    flex-direction: column;
+  }
+  .mol-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(0,180,216,0.1);
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 900;
-    font-size: 1rem;
+    color: var(--cyan);
+    margin-bottom: 1.25rem;
     flex-shrink: 0;
   }
-  .molecule-card h3 { font-size: 1rem; font-weight: 700; color: var(--blue); margin-bottom: 0.35rem; }
-  .molecule-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
-  .molecule-img { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(26,58,92,0.15); }
-  .molecule-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .mol-card h3 { font-size: 1rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
+  .mol-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.65; }
+  .mol-cta-card {
+    background: transparent;
+    box-shadow: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    text-align: center;
+  }
+  .mol-cta-label { font-size: 0.95rem; color: var(--gray); font-weight: 500; }
+  .mol-disclaimer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(0,180,216,0.08);
+    border-radius: 10px;
+    padding: 0.9rem 1.25rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.5;
+  }
 
   /* VIDEO */
   .video-section { padding: 0 0 5rem; }
@@ -489,57 +617,118 @@ import Layout from '../layouts/Layout.astro';
   .step-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
   .step-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
 
-  /* AUDIENCE SLIDER */
-  .audience-section { padding: 5rem 0; overflow: hidden; }
-  .audience-slider-wrap { margin-top: 2.5rem; }
-  .audience-slider {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    padding: 0.5rem max(1.5rem, calc((100vw - 1200px) / 2)) 1.5rem;
-  }
-  .audience-slider::-webkit-scrollbar { display: none; }
-  .audience-card {
-    flex: 0 0 340px;
-    background: var(--white);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(26,58,92,0.1);
-    scroll-snap-align: start;
-    transition: transform 0.25s;
-  }
-  .audience-card:hover { transform: translateY(-6px); }
-  .audience-card > img { width: 100%; height: 220px; object-fit: cover; display: block; }
-  .audience-card-body { padding: 1.5rem; }
-  .audience-tag {
-    display: inline-block;
-    background: linear-gradient(90deg, var(--blue), var(--cyan));
-    color: var(--white);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 0.2rem 0.75rem;
+  /* AUDIENCE CAROUSEL */
+  .audience-section { padding: 5rem 0 3rem; }
+
+  /* Filter tabs */
+  .aud-filters { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; margin: 2rem 0 2.5rem; }
+  .aud-filters-label { font-size: 0.9rem; color: var(--gray); font-weight: 500; }
+  .aud-tabs-row { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; }
+  .aud-tab {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    padding: 0.5rem 1.1rem;
+    border: 1.5px solid rgba(26,58,92,0.18);
     border-radius: 100px;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
+    background: var(--white);
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em;
+    color: var(--blue); cursor: pointer;
+    transition: all 0.2s; font-family: var(--font);
   }
-  .audience-card-body h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 0.6rem; }
-  .audience-card-body p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; margin-bottom: 1.25rem; }
-  .slider-nav { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; }
-  .slider-btn {
-    width: 46px; height: 46px;
-    border-radius: 50%;
-    border: 2px solid var(--cyan);
-    background: transparent;
-    color: var(--cyan);
-    font-size: 1.1rem;
+  .aud-tab:hover, .aud-tab.active {
+    border-color: var(--cyan); color: var(--cyan); background: rgba(0,180,216,0.06);
+  }
+  .aud-hashtag { font-size: 0.85rem; color: var(--cyan); font-weight: 600; }
+
+  /* Carousel stage */
+  .aud-carousel-wrap {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 0 2rem;
+  }
+  .aud-stage {
+    position: relative;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aud-card {
+    position: absolute;
+    width: 360px;
+    height: 320px;
+    border-radius: 22px;
+    overflow: hidden;
     cursor: pointer;
-    transition: all 0.2s;
-    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.45s, filter 0.45s, z-index 0s;
   }
-  .slider-btn:hover { background: var(--cyan); color: var(--white); }
+  .aud-card img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .aud-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(8,22,42,0.92) 45%, rgba(8,22,42,0.15) 100%);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 1.6rem;
+  }
+  .aud-card-icon {
+    position: absolute; top: 1.1rem; left: 1.1rem;
+    width: 42px; height: 42px;
+    background: rgba(255,255,255,0.14);
+    backdrop-filter: blur(8px);
+    border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white);
+  }
+  .aud-card-content h3 {
+    font-size: 1.25rem; font-weight: 800; color: var(--white); margin-bottom: 0.4rem; line-height: 1.2;
+  }
+  .aud-tag {
+    display: inline-block;
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--cyan); margin-bottom: 0.65rem;
+  }
+  .aud-card-content p {
+    font-size: 0.85rem; color: rgba(255,255,255,0.78); line-height: 1.6; margin-bottom: 0.9rem;
+  }
+  .aud-link { font-size: 0.88rem; font-weight: 600; color: var(--cyan); }
+  .aud-link:hover { text-decoration: underline; }
+
+  /* Card offsets */
+  .aud-card[data-offset="0"]  { z-index:10; transform:translateX(0) scale(1);    opacity:1;   filter:none; }
+  .aud-card[data-offset="1"]  { z-index:6;  transform:translateX(400px) scale(0.88); opacity:0.6; filter:blur(1.5px); }
+  .aud-card[data-offset="-1"] { z-index:6;  transform:translateX(-400px) scale(0.88); opacity:0.6; filter:blur(1.5px); }
+  .aud-card[data-offset="2"]  { z-index:3;  transform:translateX(730px) scale(0.78); opacity:0.3; filter:blur(3px); }
+  .aud-card[data-offset="-2"] { z-index:3;  transform:translateX(-730px) scale(0.78); opacity:0.3; filter:blur(3px); }
+  .aud-card[data-offset="3"],
+  .aud-card[data-offset="-3"],
+  .aud-card[data-offset="4"],
+  .aud-card[data-offset="-4"] { z-index:1; opacity:0; pointer-events:none; transform:translateX(0) scale(0.7); }
+
+  /* Nav arrows */
+  .aud-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    z-index: 20;
+    width: 42px; height: 42px; border-radius: 50%;
+    border: 1.5px solid rgba(26,58,92,0.14);
+    background: var(--white);
+    box-shadow: 0 4px 16px rgba(26,58,92,0.1);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blue);
+    transition: all 0.2s;
+  }
+  .aud-nav:hover { border-color: var(--cyan); color: var(--cyan); }
+  .aud-nav-prev { left: max(1.5rem, calc(50% - 680px)); }
+  .aud-nav-next { right: max(1.5rem, calc(50% - 680px)); }
+
+  /* Dots */
+  .aud-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+  .aud-dot {
+    width: 8px; height: 8px; border-radius: 4px;
+    background: rgba(26,58,92,0.2); border: none; cursor: pointer;
+    transition: all 0.3s; padding: 0;
+  }
+  .aud-dot.active { background: var(--blue); width: 24px; }
 
   /* WHY */
   .why-section { padding: 5rem 0; }
@@ -557,44 +746,91 @@ import Layout from '../layouts/Layout.astro';
   .why-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
   .why-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
 
+  /* EQUIPMENT */
+  .equipment-section { padding: 5rem 0; }
+  .equipment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+  .equipment-card {
+    background: var(--gray-light);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+  }
+  .equipment-img {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.08);
+  }
+  .equipment-img img { width: 100%; max-height: 240px; object-fit: contain; display: block; margin: 0 auto; }
+  .equipment-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
+  .equipment-card p { font-size: 0.95rem; color: var(--gray); line-height: 1.6; }
+
   /* FLOWGEN */
-  .flowgen-section { padding: 5rem 0; }
+  .flowgen-section { padding: 5rem 0; background: var(--blue); }
   .flowgen-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .flowgen-section .section-label { color: var(--cyan); }
+  .flowgen-section .section-title { color: var(--white); }
   .flowgen-tagline { font-size: 1.1rem; font-weight: 600; color: var(--cyan); margin-bottom: 1rem; }
-  .flowgen-desc { font-size: 1rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; }
+  .flowgen-desc { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 1.5rem; }
   .flowgen-features { display: flex; flex-direction: column; gap: 0.85rem; }
-  .flowgen-feature { display: flex; align-items: center; gap: 1rem; font-size: 0.95rem; font-weight: 500; }
+  .flowgen-feature { display: flex; align-items: center; gap: 1rem; font-size: 0.95rem; font-weight: 500; color: var(--white); }
   .ff-icon {
     width: 42px; height: 42px;
-    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    background: rgba(0,180,216,0.2);
+    border: 1px solid rgba(0,180,216,0.4);
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
     font-size: 1.1rem; flex-shrink: 0;
   }
-  .flowgen-visual { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(26,58,92,0.15); }
+  .flowgen-visual { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
   .flowgen-visual img { width: 100%; display: block; }
 
   @media (max-width: 900px) {
-    .molecule-grid, .office-grid, .flowgen-grid { grid-template-columns: 1fr; }
+    .mol-grid { grid-template-columns: repeat(2, 1fr); }
+    .mol-cta-card { grid-column: span 2; flex-direction: row; justify-content: space-between; padding: 1.5rem 2rem; background: var(--white); box-shadow: 0 2px 16px rgba(26,58,92,0.07); border-radius: 18px; }
+    .office-grid, .flowgen-grid { grid-template-columns: 1fr; }
     .steps-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
     .office-visual { order: -1; }
     .office-visual img { height: 260px; }
     .flowgen-visual { order: -1; }
   }
   @media (max-width: 600px) {
+    .mol-grid { grid-template-columns: 1fr; }
+    .mol-cta-card { grid-column: span 1; flex-direction: column; }
     .steps-grid, .why-grid { grid-template-columns: 1fr; }
     .hero-stat-divider { display: none; }
-    .audience-card { flex: 0 0 280px; }
-    .audience-card > img { height: 180px; }
+    .aud-card { width: 290px; height: 280px; }
   }
 </style>
 
 <script>
-  const slider = document.getElementById('audienceSlider');
-  document.getElementById('slideNext')?.addEventListener('click', () => {
-    slider?.scrollBy({ left: 360, behavior: 'smooth' });
+  const audCards = Array.from(document.querySelectorAll('.aud-card'));
+  const audDots  = Array.from(document.querySelectorAll('.aud-dot'));
+  const audTabs  = Array.from(document.querySelectorAll('.aud-tab'));
+  const total    = audCards.length;
+  let current    = 0;
+
+  function audGoTo(index) {
+    current = ((index % total) + total) % total;
+    audCards.forEach((card, i) => {
+      let offset = i - current;
+      if (offset > total / 2)  offset -= total;
+      if (offset < -total / 2) offset += total;
+      card.setAttribute('data-offset', String(offset));
+    });
+    audDots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+    const cat = audCards[current].dataset.category;
+    audTabs.forEach(tab => tab.classList.toggle('active', tab.dataset.category === cat));
+  }
+
+  document.getElementById('audNext')?.addEventListener('click', () => audGoTo(current + 1));
+  document.getElementById('audPrev')?.addEventListener('click', () => audGoTo(current - 1));
+  audDots.forEach((dot, i) => dot.addEventListener('click', () => audGoTo(i)));
+  audTabs.forEach(tab => tab.addEventListener('click', () => audGoTo(Number(tab.dataset.goto))));
+  audCards.forEach((card, i) => {
+    card.addEventListener('click', () => { if (card.dataset.offset !== '0') audGoTo(i); });
   });
-  document.getElementById('slidePrev')?.addEventListener('click', () => {
-    slider?.scrollBy({ left: -360, behavior: 'smooth' });
-  });
+
+  audGoTo(0);
 </script>

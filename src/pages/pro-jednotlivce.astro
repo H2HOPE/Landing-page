@@ -15,52 +15,61 @@ import Layout from '../layouts/Layout.astro';
   <!-- ZPŮSOB TERAPIE -->
   <section class="therapy-section">
     <div class="container">
-      <div class="therapy-grid">
-        <div class="therapy-text">
-          <p class="section-label"><span class="cs-only">Jak začít</span><span class="en-only">How to Start</span></p>
-          <h2 class="section-title"><span class="cs-only">Vyberte si způsob terapie</span><span class="en-only">Choose Your Therapy Method</span></h2>
-          <p style="font-size:1.05rem;color:var(--gray);line-height:1.7;margin-bottom:2rem">
-            <span class="cs-only">Nabízíme individuální konzultaci a pronájem vodíkového stroje k vám domů. Vše nastavíme na míru a váš pokrok sledujeme v aplikaci FlowGen.</span>
-            <span class="en-only">We offer individual consultation and rental of a hydrogen machine to your home. We set everything up to measure and track your progress in the FlowGen app.</span>
-          </p>
-          <button type="button" class="btn btn-orange" data-open-modal="contact"><span class="cs-only">Chci nezávaznou konzultaci →</span><span class="en-only">I want a free consultation →</span></button>
-        </div>
-        <div class="therapy-visual">
-          <img src="/images/h2ope-product-side-CxX-ZJVh.png" alt="H2OPE přístroj" />
-        </div>
+      <div class="text-center">
+        <h2 class="section-title"><span class="cs-only">Vyberte si způsob terapie</span><span class="en-only">Choose Your Therapy Method</span></h2>
+        <p class="section-sub" style="max-width:560px;margin-left:auto;margin-right:auto;margin-bottom:2rem">
+          <span class="cs-only">Nabízíme individuální konzultaci a pronájem vodíkového stroje k vám domů. Vše nastavíme na míru a váš pokrok sledujeme v aplikaci FlowGen.</span>
+          <span class="en-only">We offer individual consultation and rental of a hydrogen machine to your home. We set everything up to measure and track your progress in the FlowGen app.</span>
+        </p>
+        <button type="button" class="btn btn-orange" data-open-modal="contact"><span class="cs-only">Chci nezávaznou konzultaci →</span><span class="en-only">I want a free consultation →</span></button>
       </div>
     </div>
   </section>
+
 
   <!-- JAK TO FUNGUJE - 4 KROKY -->
   <section class="steps4-section section-gray">
     <div class="container">
       <div class="text-center">
-        <p class="section-label"><span class="cs-only">Proces</span><span class="en-only">Process</span></p>
         <h2 class="section-title"><span class="cs-only">Jak to funguje</span><span class="en-only">How It Works</span></h2>
         <p class="section-sub"><span class="cs-only">Jednoduchý proces od konzultace po pravidelnou terapii doma.</span><span class="en-only">Simple process from consultation to regular therapy at home.</span></p>
       </div>
       <div class="steps4-grid">
         <div class="step4-card">
+          <div class="step4-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
           <div class="step4-num">01</div>
           <h3><span class="cs-only">Individuální konzultace</span><span class="en-only">Individual Consultation</span></h3>
           <p><span class="cs-only">Společně si ujasníme cíle a doporučíme vhodný postup. Konzultace je nezávazná a trvá přibližně 30 minut.</span><span class="en-only">Together we clarify your goals and recommend the right approach. The consultation is free and takes approximately 30 minutes.</span></p>
         </div>
         <div class="step4-card">
+          <div class="step4-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
           <div class="step4-num">02</div>
           <h3><span class="cs-only">Nastavení FlowGen</span><span class="en-only">FlowGen Setup</span></h3>
           <p><span class="cs-only">Propojíme vás s aplikací FlowGen pro sledování individuálního pokroku. Vše nastavíme a vysvětlíme.</span><span class="en-only">We'll connect you with the FlowGen app for tracking individual progress. We'll set everything up and explain it.</span></p>
         </div>
         <div class="step4-card">
+          <div class="step4-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
           <div class="step4-num">03</div>
           <h3><span class="cs-only">Pronájem stroje domů</span><span class="en-only">Home Machine Rental</span></h3>
           <p><span class="cs-only">Zapůjčíme vám vodíkový stroj domů, abyste mohli inhalovat pravidelně a pohodlně ve svém prostředí.</span><span class="en-only">We loan you a hydrogen machine at home so you can inhale regularly and comfortably in your own environment.</span></p>
         </div>
         <div class="step4-card">
+          <div class="step4-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+          </div>
           <div class="step4-num">04</div>
           <h3><span class="cs-only">Vyhodnocení a optimalizace</span><span class="en-only">Evaluation & Optimization</span></h3>
           <p><span class="cs-only">Analyzujeme data z aplikace a průběžně upravujeme program tak, aby dával smysl vašemu tělu i režimu.</span><span class="en-only">We analyze data from the app and continuously adjust the program so it makes sense for your body and lifestyle.</span></p>
         </div>
+      </div>
+      <div class="text-center" style="margin-top:2.5rem">
+        <button type="button" class="btn btn-orange" data-open-modal="contact"><span class="cs-only">Chci nezávaznou konzultaci →</span><span class="en-only">I want a free consultation →</span></button>
       </div>
     </div>
   </section>
@@ -69,52 +78,71 @@ import Layout from '../layouts/Layout.astro';
   <section class="benefits-section">
     <div class="container">
       <div class="text-center">
-        <p class="section-label"><span class="cs-only">Benefity</span><span class="en-only">Benefits</span></p>
         <h2 class="section-title"><span class="cs-only">Výhody vodíkové terapie</span><span class="en-only">Benefits of Hydrogen Therapy</span></h2>
         <p class="section-sub"><span class="cs-only">Co lidé na vodíkové terapii nejčastěji oceňují. Jednoduše a srozumitelně.</span><span class="en-only">What people most often appreciate about hydrogen therapy. Simply and clearly explained.</span></p>
       </div>
       <div class="benefits8-grid">
         <div class="benefit8">
           <div class="b8-icon">💧</div>
-          <h3><span class="cs-only">Hydratace organismu</span><span class="en-only">Body Hydration</span></h3>
-          <p><span class="cs-only">Podporuje optimální fungování buněk a regulaci tělesné teploty.</span><span class="en-only">Supports optimal cell function and body temperature regulation.</span></p>
+          <div class="b8-text">
+            <h3><span class="cs-only">Hydratace organismu</span><span class="en-only">Body Hydration</span></h3>
+            <p><span class="cs-only">Podporuje optimální fungování buněk a regulaci tělesné teploty.</span><span class="en-only">Supports optimal cell function and body temperature regulation.</span></p>
+          </div>
         </div>
         <div class="benefit8">
           <div class="b8-icon">⚡</div>
-          <h3><span class="cs-only">Rychlejší regenerace</span><span class="en-only">Faster Recovery</span></h3>
-          <p><span class="cs-only">Pomáhá eliminovat kyselinu mléčnou po fyzické aktivitě.</span><span class="en-only">Helps eliminate lactic acid after physical activity.</span></p>
+          <div class="b8-text">
+            <h3><span class="cs-only">Rychlejší regenerace</span><span class="en-only">Faster Recovery</span></h3>
+            <p><span class="cs-only">Pomáhá eliminovat kyselinu mléčnou po fyzické aktivitě.</span><span class="en-only">Helps eliminate lactic acid after physical activity.</span></p>
+          </div>
         </div>
         <div class="benefit8">
           <div class="b8-icon">✨</div>
-          <h3><span class="cs-only">Podpora zdraví pleti</span><span class="en-only">Skin Health Support</span></h3>
-          <p><span class="cs-only">Redukuje oxidační stres a podporuje přirozenou obnovu pokožky.</span><span class="en-only">Reduces oxidative stress and supports natural skin renewal.</span></p>
+          <div class="b8-text">
+            <h3><span class="cs-only">Podpora zdraví pleti</span><span class="en-only">Skin Health Support</span></h3>
+            <p><span class="cs-only">Redukuje oxidační stres a podporuje přirozenou obnovu pokožky.</span><span class="en-only">Reduces oxidative stress and supports natural skin renewal.</span></p>
+          </div>
         </div>
         <div class="benefit8">
           <div class="b8-icon">🧠</div>
-          <h3><span class="cs-only">Mentální výkon</span><span class="en-only">Mental Performance</span></h3>
-          <p><span class="cs-only">Pozitivně ovlivňuje kognitivní funkce, paměť a soustředění.</span><span class="en-only">Positively influences cognitive functions, memory, and concentration.</span></p>
+          <div class="b8-text">
+            <h3><span class="cs-only">Mentální výkon</span><span class="en-only">Mental Performance</span></h3>
+            <p><span class="cs-only">Pozitivně ovlivňuje kognitivní funkce, paměť a soustředění.</span><span class="en-only">Positively influences cognitive functions, memory, and concentration.</span></p>
+          </div>
         </div>
         <div class="benefit8">
           <div class="b8-icon">❤️</div>
-          <h3><span class="cs-only">Kardiovaskulární podpora</span><span class="en-only">Cardiovascular Support</span></h3>
-          <p><span class="cs-only">Přispívá ke snížení oxidace LDL cholesterolu.</span><span class="en-only">Contributes to reduced LDL cholesterol oxidation.</span></p>
+          <div class="b8-text">
+            <h3><span class="cs-only">Kardiovaskulární podpora</span><span class="en-only">Cardiovascular Support</span></h3>
+            <p><span class="cs-only">Přispívá ke snížení oxidace LDL cholesterolu.</span><span class="en-only">Contributes to reduced LDL cholesterol oxidation.</span></p>
+          </div>
         </div>
         <div class="benefit8">
           <div class="b8-icon">🔋</div>
-          <h3><span class="cs-only">Více energie</span><span class="en-only">More Energy</span></h3>
-          <p><span class="cs-only">Podporuje energetický metabolismus na buněčné úrovni.</span><span class="en-only">Supports energy metabolism at the cellular level.</span></p>
+          <div class="b8-text">
+            <h3><span class="cs-only">Více energie</span><span class="en-only">More Energy</span></h3>
+            <p><span class="cs-only">Podporuje energetický metabolismus na buněčné úrovni.</span><span class="en-only">Supports energy metabolism at the cellular level.</span></p>
+          </div>
         </div>
         <div class="benefit8">
           <div class="b8-icon">🛡️</div>
-          <h3><span class="cs-only">Imunitní systém</span><span class="en-only">Immune System</span></h3>
-          <p><span class="cs-only">Moduluje imunitní odpověď a podporuje obranyschopnost.</span><span class="en-only">Modulates immune response and supports immunity.</span></p>
+          <div class="b8-text">
+            <h3><span class="cs-only">Imunitní systém</span><span class="en-only">Immune System</span></h3>
+            <p><span class="cs-only">Moduluje imunitní odpověď a podporuje obranyschopnost.</span><span class="en-only">Modulates immune response and supports immunity.</span></p>
+          </div>
         </div>
         <div class="benefit8">
           <div class="b8-icon">🌿</div>
-          <h3><span class="cs-only">Celková vitalita</span><span class="en-only">Overall Vitality</span></h3>
-          <p><span class="cs-only">Zlepšuje fyzický výkon a pocit životní energie.</span><span class="en-only">Improves physical performance and sense of life energy.</span></p>
+          <div class="b8-text">
+            <h3><span class="cs-only">Celková vitalita</span><span class="en-only">Overall Vitality</span></h3>
+            <p><span class="cs-only">Zlepšuje fyzický výkon a pocit životní energie.</span><span class="en-only">Improves physical performance and sense of life energy.</span></p>
+          </div>
         </div>
       </div>
+      <p class="benefits-disclaimer">
+        <span class="cs-only">H2OPE neposkytuje lékařské služby. Vodíková terapie je wellness program a nenahrazuje odbornou lékařskou péči.</span>
+        <span class="en-only">H2OPE does not provide medical services. Hydrogen therapy is a wellness program and does not replace professional medical care.</span>
+      </p>
     </div>
   </section>
 
@@ -158,7 +186,6 @@ import Layout from '../layouts/Layout.astro';
   <section class="faq-section section-gray">
     <div class="container">
       <div class="text-center">
-        <p class="section-label">FAQ</p>
         <h2 class="section-title"><span class="cs-only">Často kladené dotazy</span><span class="en-only">Frequently Asked Questions</span></h2>
         <p class="section-sub"><span class="cs-only">Odpovědi na nejčastější otázky o pronájmu stroje domů.</span><span class="en-only">Answers to the most common questions about home machine rental.</span></p>
       </div>
@@ -204,12 +231,14 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
+  <section class="cta-wrap">
     <div class="container">
-      <h2><span class="cs-only">Nejste si jistí jak vám vodík pomůže?</span><span class="en-only">Not sure how hydrogen can help you?</span></h2>
-      <p><span class="cs-only">Pojďme se spojit na 15 min, kde Vám vše ukážeme a vysvětlíme</span><span class="en-only">Let's connect for 15 min and we'll show and explain everything</span></p>
-      <button type="button" class="btn btn-orange" data-open-modal="contact"><span class="cs-only">Chci nezávaznou konzultaci</span><span class="en-only">I want a free consultation</span></button>
-      <p class="cta-note"><span class="cs-only">Konzultace je nezávazná. Lidský přístup.</span><span class="en-only">Consultation is free. Human approach.</span></p>
+      <div class="cta-card">
+        <p class="cta-pre"><span class="cs-only">Nejste si jistí jak vám vodík pomůže?</span><span class="en-only">Not sure how hydrogen can help you?</span></p>
+        <h2><span class="cs-only">Pojďme se spojit na 15 min, kde Vám vše ukážeme a vysvětlíme</span><span class="en-only">Let's connect for 15 min and we'll show and explain everything</span></h2>
+        <button type="button" class="btn btn-orange" data-open-modal="contact"><span class="cs-only">Chci nezávaznou konzultaci</span><span class="en-only">I want a free consultation</span> →</button>
+        <p class="cta-note"><span class="cs-only">Konzultace je nezávazná. Lidský přístup.</span><span class="en-only">Consultation is free. Human approach.</span></p>
+      </div>
     </div>
   </section>
 
@@ -218,37 +247,60 @@ import Layout from '../layouts/Layout.astro';
 <style>
   /* THERAPY */
   .therapy-section { padding: 5rem 0; }
-  .therapy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-  .therapy-visual { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(26,58,92,0.15); }
-  .therapy-visual img { width: 100%; display: block; }
 
   /* STEPS 4 */
   .steps4-section { padding: 5rem 0; }
-  .steps4-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1rem; }
+  .steps4-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 1rem; }
   .step4-card {
     background: var(--white);
     border-radius: 16px;
-    padding: 2rem;
+    padding: 1.75rem;
     box-shadow: 0 4px 20px rgba(26,58,92,0.07);
-    border-left: 4px solid var(--cyan);
   }
-  .step4-num { font-size: 2.2rem; font-weight: 900; color: var(--cyan); opacity: 0.25; margin-bottom: 0.5rem; }
-  .step4-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
-  .step4-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.65; }
+  .step4-icon {
+    width: 48px; height: 48px;
+    background: rgba(0,180,216,0.1);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--cyan);
+  }
+  .step4-icon svg { width: 22px; height: 22px; }
+  .step4-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 0.82rem; font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+  .step4-card h3 { font-size: 1rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
+  .step4-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.65; }
 
   /* BENEFITS 8 */
   .benefits-section { padding: 5rem 0; }
-  .benefits8-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 1rem; }
+  .benefits8-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 1rem; }
   .benefit8 {
-    background: var(--gray-light);
+    background: var(--white);
     border-radius: 14px;
     padding: 1.5rem;
-    transition: transform 0.25s, background 0.25s;
+    box-shadow: 0 2px 12px rgba(26,58,92,0.06);
+    display: flex; gap: 1rem; align-items: flex-start;
+    transition: transform 0.25s, box-shadow 0.25s;
   }
-  .benefit8:hover { background: var(--white); transform: translateY(-4px); box-shadow: 0 8px 28px rgba(26,58,92,0.1); }
-  .b8-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
-  .benefit8 h3 { font-size: 0.95rem; font-weight: 700; color: var(--blue); margin-bottom: 0.4rem; }
+  .benefit8:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,58,92,0.1); }
+  .b8-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: rgba(0,180,216,0.12);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.35rem;
+  }
+  .b8-text { flex: 1; }
+  .benefit8 h3 { font-size: 0.95rem; font-weight: 700; color: var(--blue); margin-bottom: 0.35rem; }
   .benefit8 p { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+  .benefits-disclaimer { font-size: 0.82rem; color: var(--gray); text-align: center; margin-top: 2rem; opacity: 0.8; line-height: 1.6; }
 
   /* TOPICS */
   .topics-section { padding: 5rem 0; background: var(--gray-light); }
@@ -313,8 +365,8 @@ import Layout from '../layouts/Layout.astro';
   .faq-body { padding: 0 1.5rem 1.25rem; }
   .faq-body p { font-size: 0.93rem; color: var(--gray); line-height: 1.7; }
 
-  @media (max-width: 1000px) {
-    .benefits8-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 1100px) {
+    .steps4-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 760px) {
     .therapy-grid, .flowgen-grid { grid-template-columns: 1fr; }
@@ -322,8 +374,6 @@ import Layout from '../layouts/Layout.astro';
     .fg-visual { order: -1; }
     .therapy-visual img, .fg-visual img { max-height: 280px; object-fit: cover; }
     .topics-grid { grid-template-columns: 1fr; gap: 2rem; }
-  }
-  @media (max-width: 540px) {
     .benefits8-grid { grid-template-columns: 1fr; }
   }
 </style>
