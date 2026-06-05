@@ -1,6 +1,4 @@
 ---
-import ContactModal from '../components/ContactModal.astro';
-
 export interface Props {
   title?: string;
   description?: string;
@@ -59,7 +57,7 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <span class="cs-only">EN</span><span class="en-only">CS</span>
           </button>
-          <a href="#kontakt" class="btn btn-orange nav-cta"><span class="cs-only">Kontakt</span><span class="en-only">Contact</span></a>
+          <a href="/kontakt" class="btn btn-orange nav-cta"><span class="cs-only">Kontakt</span><span class="en-only">Contact</span></a>
         </div>
       </div>
     </div>
@@ -85,7 +83,7 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
             <li><a href="/jak-to-funguje"><span class="cs-only">Jak to funguje</span><span class="en-only">How It Works</span></a></li>
             <li><a href="/pro-firmy"><span class="cs-only">Pro firmy</span><span class="en-only">For Companies</span></a></li>
             <li><a href="/pro-jednotlivce"><span class="cs-only">Pro jednotlivce</span><span class="en-only">For Individuals</span></a></li>
-            <li><a href="#kontakt"><span class="cs-only">Kontakt</span><span class="en-only">Contact</span></a></li>
+            <li><a href="/kontakt"><span class="cs-only">Kontakt</span><span class="en-only">Contact</span></a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -110,8 +108,6 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
       </div>
     </div>
   </footer>
-
-  <ContactModal />
 
   <script>
     const toggle = document.getElementById('navToggle');
